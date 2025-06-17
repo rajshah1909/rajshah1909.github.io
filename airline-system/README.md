@@ -10,5 +10,5 @@ This project simulates an airline reservation system using SQL database schemas 
 📁 **View Files**: [Click Here](https://github.com/rajshah1909/rajshah1909.github.io/tree/main/airline-system)
 - Demo walkthrough (MP4)
 
-🎥 **Watch the demo video**: [Click to play]([./REC-20250511205828.mp4](https://youtu.be/QSdlH-vjGOA))  
+🎥 **Watch the demo video** on [YouTube](https://youtu.be/QSdIH-vjGOA)
 📄 Check the schema files to see how the system is structured.
