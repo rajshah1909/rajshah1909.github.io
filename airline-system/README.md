@@ -17,7 +17,8 @@ This project simulates an airline reservation system using SQL database schemas 
 
 ### 🎥 Demo Walkthrough
 
-▶️ **Watch the demo video** on [YouTube](https://youtu.be/QSdlH-vjGOA)
+▶️ **Watch the demo video** on [YouTube](https://www.youtube.com/watch?v=QSdlH-vjGOA)
+
 
 ---
 
