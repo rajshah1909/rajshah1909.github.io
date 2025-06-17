@@ -15,6 +15,6 @@ I'm a Computer Science and Data Science student at Rutgers University, passionat
 - ✈️ **Airline System Project** — [View project](./airline-system/README.md)
 
 ## 📫 Contact Me
-- 📧 Email: ras637@rutgers.edu  
+- 📧 Email: rajshah.ap302@gmail.com 
 - 💼 [LinkedIn](https://www.linkedin.com/in/raj-shah-42985323b/)  
 - 💻 [GitHub](https://github.com/rajshah1909)
