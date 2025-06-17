@@ -12,6 +12,7 @@ I'm a Computer Science and Data Science student at Rutgers University, passionat
 - 🎭 **Broadway Tableau Dashboard** — [View project](#)
 - 📊 **Disney Revenue Analysis** — [View project](#)
 - 🧬 **COVID-19 Trends with Delphi Dataset** — [View project](#)
+- ✈️ **Airline System Project** — [View project](./airline-system/README.md)
 
 ## 📫 Contact Me
 - 📧 Email: ras637@rutgers.edu  
