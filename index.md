@@ -10,7 +10,7 @@ I'm a Computer Science and Data Science student at Rutgers University, passionat
 ## 📁 Featured Projects
 
 - 🎭 **Broadway Tableau Dashboard** — [View project](#)
-- 📊 **Disney Revenue Analysis** — [View project](#)
+- - 📊 **Disney Revenue Analysis** — [View project](./disney-revenue-analysis/README.md)
 - 🧬 **COVID-19 Trends with Delphi Dataset** — [View project](#)
 - ✈️ **Airline System Project** — [View project](./airline-system/README.md)
 
