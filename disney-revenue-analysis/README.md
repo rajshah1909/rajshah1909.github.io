@@ -21,7 +21,8 @@ This project explores revenue trends from Disney movies released between 1937 an
 
 ## 🔗 Project Files
 
-- 📁 [Download Tableau Workbook (.twbx)](./Tech_Excercise_#3_Raj_Shah.twbx)
+- 📁 [Download Tableau Workbook (.twbx)](./disney_revenue_analysis.twbx)
+
 
 ---
 
