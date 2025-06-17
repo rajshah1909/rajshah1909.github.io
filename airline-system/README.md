@@ -7,7 +7,8 @@ This project simulates an airline reservation system using SQL database schemas 
 ## 📁 Project Files
 - SQL schema and data scripts
 - ER diagram and checklist (PDF)
+📁 **View Files**: [Click Here](https://github.com/rajshah1909/rajshah1909.github.io/tree/main/airline-system)
 - Demo walkthrough (MP4)
 
-🎥 **Watch the demo video** in this folder.  
+🎥 **Watch the demo video**: [Click to play](./REC-20250511205828.mp4)  
 📄 Check the schema files to see how the system is structured.
