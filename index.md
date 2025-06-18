@@ -18,10 +18,9 @@ I’m skilled in **Python**, **SQL**, **Excel**, and **Tableau**, and I enjoy tr
 
 ## 📁 Featured Projects
 
-- 🎭 **Broadway Tableau Dashboard** — [View project](./broadway-dashboard/README.md)
-- 📊 **Disney Revenue Analysis** — [View project](./disney-revenue-analysis/README.md)
-- 🧬 **COVID-19 Trends with Delphi Dataset** — [View project](#)
-- ✈️ **Airline System Project** — [View project](./airline-system/README.md)
+- 🎭 **Broadway Tableau Dashboard** — [View on GitHub](https://github.com/rajshah1909/Projects/tree/main/Broadway_Tableau_Dashboard)
+- 📊 **Disney Revenue Analysis** — [View on GitHub](https://github.com/rajshah1909/Projects/tree/main/Disney_Revenue_Analysis)
+- ✈️ **Airline System Project** — [View on GitHub](https://github.com/rajshah1909/Projects/tree/main/Airline_Reservation_System)
 
 ---
 
