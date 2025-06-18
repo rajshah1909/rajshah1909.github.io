@@ -3,7 +3,9 @@ layout: default
 title: Raj Shah – Data Portfolio
 ---
 
-<img src="./raj_headshot.jpg" alt="Raj Shah Headshot" width="160" style="border-radius: 50%; margin-bottom: 20px;">
+<p align="center">
+  <img src="./raj_headshot.jpg" alt="Raj Shah Headshot" width="160" style="border-radius: 50%; margin-bottom: 20px;">
+</p>
 
 # 👋 Hi, I’m Raj Shah
 
