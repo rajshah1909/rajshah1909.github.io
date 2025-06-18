@@ -2,10 +2,6 @@
 title: Raj Shah
 ---
 
-<p align="left">
-  <img src="./raj_headshot.JPG" alt="Raj Shah Headshot" width="160" style="margin-bottom: 20px;">
-</p>
-
 # 👋 Hi, I’m Raj Shah
 
 🎓 I'm a Computer Science and Data Science student at Rutgers University, passionate about data analytics, problem-solving, and visual storytelling.
