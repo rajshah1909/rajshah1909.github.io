@@ -9,7 +9,7 @@ title: Raj Shah – Data Portfolio
 
 🎓 I'm a Computer Science and Data Science student at Rutgers University, passionate about data analytics, problem-solving, and visual storytelling.
 
-📈 My goal is to become a data analyst and evolve into a data scientist — driven by curiosity, evidence, and a desire to make an impact.
+📈 My goal is to become a data analyst and evolve into a data scientist, driven by curiosity, evidence, and a desire to make an impact.
 
 I’m skilled in **Python**, **SQL**, **Excel**, and **Tableau**, and I enjoy transforming complex data into clear insights. Below are a few projects I’ve completed so far — many of which started in class and were expanded upon independently.
 
