@@ -28,7 +28,7 @@ I’m skilled in **Python**, **SQL**, **Excel**, and **Tableau**, and I enjoy tr
 
 ## 📄 Resume
 
-- [📄 Download My Resume (PDF)](./assets/images/Raj_Shah_Resume.pdf)
+- [📄 Download My Resume (PDF)](./Raj_Shah_Resume.pdf)
 
 ---
 
