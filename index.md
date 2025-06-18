@@ -10,11 +10,11 @@ I'm a Computer Science and Data Science student at Rutgers University, passionat
 ## 📁 Featured Projects
 
 - 🎭 **Broadway Tableau Dashboard** — [View project](./broadway-dashboard/README.md)
-- - 📊 **Disney Revenue Analysis** — [View project](./disney-revenue-analysis/README.md)
+- 📊 **Disney Revenue Analysis** — [View project](./disney-revenue-analysis/README.md)
 - 🧬 **COVID-19 Trends with Delphi Dataset** — [View project](#)
 - ✈️ **Airline System Project** — [View project](./airline-system/README.md)
 
 ## 📫 Contact Me
-- 📧 Email: rajshah.ap302@gmail.com 
+- 📧 **Email:** <a href="mailto:rajshah.ap302@gmail.com" title="Email: rajshah.ap302@gmail.com">rajshah.ap302@gmail.com</a>
 - 💼 LinkedIn: [LinkedIn](https://www.linkedin.com/in/raj-shah-42985323b/)  
 - 💻 GitHub: [GitHub](https://github.com/rajshah1909)
