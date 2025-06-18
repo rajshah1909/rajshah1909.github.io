@@ -36,4 +36,4 @@ I’m skilled in **Python**, **SQL**, **Excel**, and **Tableau**, and I enjoy tr
 - 💼 **LinkedIn:** [linkedin.com/in/raj-shah-42985323b](https://www.linkedin.com/in/raj-shah-42985323b/)  
 - 💻 **GitHub:** [github.com/rajshah1909](https://github.com/rajshah1909)  
 - 🌐 **Portfolio:** [rajshah1909.github.io](https://rajshah1909.github.io)  
-- 🎓 **Rutgers Handshake:** [View Profile](https://rutgers.joinhandshake.com/profiles/czuhrf)
+- 🎓 **Rutgers Handshake:** [handshake.com/profile/czuhrf](https://rutgers.joinhandshake.com/profiles/czuhrf)
