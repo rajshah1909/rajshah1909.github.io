@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Raj Shah – Data Portfolio
+title: Raj Shah
 ---
 
 <p align="left">
