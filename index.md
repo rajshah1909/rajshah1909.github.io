@@ -42,12 +42,6 @@ Analyzed trends in Disney movie gross revenue from 1937 – 2016. Used Tableau f
 
 ---
 
-## 📄 Resume
-
-- [📄 Download My Resume (PDF)](./Raj_Shah_Resume.pdf)
-
----
-
 ## 📫 Contact Me
 
 - 📧 **Email:** <a href="mailto:rajshah.ap302@gmail.com" title="Email: rajshah.ap302@gmail.com">rajshah.ap302@gmail.com</a>  
