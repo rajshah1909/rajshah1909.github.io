@@ -14,9 +14,11 @@ title: Raj Shah
 
 ## 🧰 Skills & Tools
 
-- **Languages**: SQL, Python, R  
-- **Data Tools**: Tableau, Excel, MySQL  
-- **Techniques**: Data Cleaning, Dashboard Design, ER Modeling, Statistical Analysis  
+- **Programming & Analysis**: SQL, Python (pandas, NumPy), R
+- **Data Visualization**: Tableau (Dashboards, Storytelling), Power BI (Interactive Dashboards, Reports), Excel (Pivot Tables, Charts), Matplotlib
+- **Database Management**: MySQL, SQL Server, ER Modeling
+- **Data Techniques**: Data Cleaning, Data Profiling, Statistical Analysis, Descriptive & Trend Analysis, Predictive Analytics, Business Intelligence
+- **Operating Systems**: Windows, Linux, MacOS
 - **Soft Skills**: Problem Solving, Communication, Team Collaboration
 
 ---
