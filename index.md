@@ -23,7 +23,21 @@ title: Raj Shah
 
 ---
 
+**Data Analysis Intern – The Marcus Harris Foundation | Remote | Aug 2025 – Present**  
+- Organized and cleaned 1,500+ program records, ensuring accuracy and reliability for analysis  
+- Removed 200+ duplicate entries and harmonized fields, improving dataset quality for reporting  
+- Built 5+ Excel-based visualizations (charts and pivot tables) to track donation trends and participant engagement  
+- Collaborated with cross-functional team members to streamline reporting workflows, reducing data preparation time by 25%  
+
+---
+
 ## 📁 Featured Projects
+
+### 📊 Marcus Harris Foundation Data Analytics Project | Aug 2025 – Present
+- Cleaned and analyzed 1,500+ rows of donation and attendance data using Python (Pandas, Matplotlib, Seaborn)  
+- Built interactive dashboards in **Power BI** and **Tableau** to visualize donations, attendance, and participant feedback  
+- Performed forecasting for donation trends and conducted sentiment analysis on feedback to guide program improvements  
+- Delivered actionable insights through dashboards and a 5-slide executive report, enabling stakeholders to easily explore program impact.
 
 ### ✈️ Airline Reservation System (SQL)
 Simulates a relational airline booking system using MySQL and schema design. Includes table creation, waitlist logic, and booking reports.  
