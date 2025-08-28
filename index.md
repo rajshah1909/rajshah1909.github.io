@@ -4,11 +4,11 @@ title: Raj Shah
 
 # 👋 Hi, I’m Raj Shah
 
-🎓 Motivated and detail-oriented Computer Science and Data Science student at Rutgers University with strong analytical and technical skills. Proficient in SQL, Excel, Tableau, and Python, with hands-on experience in data cleaning, relational database design, and interactive dashboard development.
+🎓 Senior double major in Computer Science and Data Science at Rutgers University. I specialize in data analysis and visualization, with strong skills in SQL, Python, Tableau, and Excel. Experienced in data cleaning, relational database design, and building interactive dashboards.
 
-📈 Passionate about uncovering insights from real-world datasets and transforming complex information into actionable visual stories. Demonstrated ability to build data pipelines, design well-structured dashboards, and deliver results through data-driven problem-solving.
+📈 Passionate about uncovering insights from real-world datasets and transforming them into clear, actionable visual stories. Skilled in building data pipelines, designing user-friendly dashboards, and delivering results through data-driven problem solving.
 
-💼 Eager to apply my skills in a real-world setting and contribute to business or research outcomes through meaningful analytics. Actively seeking internship or entry-level opportunities in data analytics to further develop and grow into a future data scientist.
+💼 Eager to apply my skills in real-world settings and contribute to impactful business or research outcomes through meaningful analytics. Currently seeking entry-level data analyst opportunities, with the long-term goal of growing into a data scientist role.
 
 ---
 
@@ -17,7 +17,7 @@ title: Raj Shah
 - **Programming & Analysis**: SQL, Python (pandas, NumPy), R
 - **Data Visualization**: Tableau (Dashboards, Storytelling), Power BI (Interactive Dashboards, Reports), Excel (Pivot Tables, Charts), Matplotlib
 - **Database Management**: MySQL, SQL Server, ER Modeling
-- **Data Techniques**: Data Cleaning, Data Profiling, Statistical Analysis, Descriptive & Trend Analysis, Predictive Analytics, Business Intelligence
+- **Analytics Techniques**: Data Cleaning, Data Profiling, Statistical Analysis, Descriptive & Trend Analysis, Predictive Analytics, Business Intelligence
 - **Operating Systems**: Windows, Linux, MacOS
 - **Soft Skills**: Problem Solving, Communication, Team Collaboration
 
