@@ -23,6 +23,8 @@ title: Raj Shah
 
 ---
 
+## 💼 Professional Experience
+
 **Data Analysis Intern – The Marcus Harris Foundation | Remote | Aug 2025 – Present**  
 - Organized and cleaned 1,500+ program records, ensuring accuracy and reliability for analysis  
 - Removed 200+ duplicate entries and harmonized fields, improving dataset quality for reporting  
