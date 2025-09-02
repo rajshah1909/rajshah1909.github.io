@@ -59,7 +59,7 @@ Analyzed trends in Disney movie gross revenue from 1937 – 2016. Used Tableau f
 
 Explore my detailed **Rutgers coursework projects**, showcasing hands-on experience in Python, R, SQL, Tableau, Power BI, Excel, and Linux-based development. This includes:
 
--Data Literacy (R) 🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Data%20Literacy)
+- Data Literacy (R) 🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Data%20Literacy)
 - Statistical Inference (R)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Statistical%20Inference%20for%20Data%20Science)
 - Data Management for Data Science (Python + Jupyter + Excel)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Data%20Management%20for%20Data%20Science)
 - Internet Technologies (Python + Linux)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Internet%20Technology)
