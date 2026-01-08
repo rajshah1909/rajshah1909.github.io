@@ -108,7 +108,7 @@ title: Raj Shah
       </ul>
     </details>
 
-    <details>
+    <details open>
       <summary>Core Technologies</summary>
       <ul>
         <li>Python, SQL, Flask APIs</li>
