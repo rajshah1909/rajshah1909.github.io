@@ -1,77 +1,127 @@
 ---
+layout: default
 title: Raj Shah
 ---
 
-# 👋 Hi, I’m Raj Shah
+<section id="projects">
+  <h2>Featured Engineering Projects</h2>
 
-🎓 Senior double major in Computer Science and Data Science at Rutgers University. I specialize in data analysis and visualization, with strong skills in SQL, Python, Tableau, and Excel. Experienced in data cleaning, relational database design, and building interactive dashboards.
+  <div class="cards">
+    <div class="card">
+      <h3>RU-PATH — AI Campus Navigation & Parking Assistant</h3>
+      <p>
+        Built a grounded AI system for Rutgers New Brunswick that answers real parking and transit questions using
+        official datasets converted into structured JSON, retrieval grounding, and deterministic rule validation.
+      </p>
+      <div class="tags">
+        <span class="tag">DeepSeek API</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Rule Validation</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Docker</span>
+      </div>
+      <div class="actions">
+        <a href="https://github.com/rajshah1909/ru-path" target="_blank" rel="noopener">Repo</a>
+        <a href="https://youtu.be/XkFiByMFBlc" target="_blank" rel="noopener">Demo</a>
+      </div>
+    </div>
 
-📈 Passionate about uncovering insights from real-world datasets and transforming them into clear, actionable visual stories. Skilled in building data pipelines, designing user-friendly dashboards, and delivering results through data-driven problem solving.
+    <div class="card">
+      <h3>Automated Data Collection & Analysis Pipeline</h3>
+      <p>
+        Built an end-to-end Python + SQL pipeline for ingestion, validation, and transformation of raw datasets into
+        Tableau-ready outputs. Reduced prep time from 10+ hours/week to under 2 hours and supported dashboards used
+        by 100+ stakeholders.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Validation</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">dbt-style models</span>
+      </div>
+      <div class="actions">
+        <a href="https://github.com/rajshah1909/Projects" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
 
-💼 Eager to apply my skills in real-world settings and contribute to impactful business or research outcomes through meaningful analytics. Currently seeking entry-level data analyst opportunities, with the long-term goal of growing into a data scientist role.
+    <div class="card">
+      <h3>Airline Reservation System (SQL + Backend)</h3>
+      <p>
+        Designed a relational schema and transactional workflows for an airline booking system. Built reporting queries,
+        waitlist logic, and database-driven analytics.
+      </p>
+      <div class="tags">
+        <span class="tag">MySQL</span>
+        <span class="tag">Schema Design</span>
+        <span class="tag">SQL Analytics</span>
+        <span class="tag">Transactions</span>
+      </div>
+      <div class="actions">
+        <a href="https://github.com/rajshah1909/Projects" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
 
----
+    <div class="card">
+      <h3>Broadway Dashboard (Excel + Tableau)</h3>
+      <p>
+        Cleaned Broadway grosses data and built interactive Tableau dashboards showing pricing, capacity, and weekly revenue trends.
+      </p>
+      <div class="tags">
+        <span class="tag">Excel</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Storytelling</span>
+      </div>
+      <div class="actions">
+        <a href="https://github.com/rajshah1909/Projects" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-## 🧰 Skills & Tools
+<section id="how">
+  <h2>How I Build</h2>
+  <div class="grid-2">
+    <details open>
+      <summary>Engineering mindset</summary>
+      <ul>
+        <li>Start with constraints: ambiguity, data quality, latency, reliability.</li>
+        <li>Separate deterministic rules from probabilistic generation.</li>
+        <li>Use validation checks so dashboards/models don’t silently break.</li>
+        <li>Iterate with evaluation sets + error analysis.</li>
+      </ul>
+    </details>
 
-- **Programming & Analysis**: SQL, Python (pandas, NumPy), R
-- **Data Visualization**: Tableau (Dashboards, Storytelling), Power BI (Interactive Dashboards, Reports), Excel (Pivot Tables, Charts), Matplotlib
-- **Database Management**: MySQL, SQL Server, ER Modeling
-- **Analytics Techniques**: Data Cleaning, Data Profiling, Statistical Analysis, Descriptive & Trend Analysis, Predictive Analytics, Business Intelligence
-- **Operating Systems**: Windows, Linux, MacOS
-- **Soft Skills**: Problem Solving, Communication, Team Collaboration
+    <details>
+      <summary>Core tools</summary>
+      <ul>
+        <li>Python, SQL, Flask APIs</li>
+        <li>LLMs, prompt engineering, retrieval grounding</li>
+        <li>Docker, GitHub Actions, deployment workflows</li>
+        <li>Tableau/Power BI for decision-ready reporting</li>
+      </ul>
+    </details>
+  </div>
+</section>
 
----
+<section id="why">
+  <h2>Why I’m Ready for AI / ML Engineering</h2>
+  <details open>
+    <summary>My proof</summary>
+    <ul>
+      <li>Built RU-PATH as a full system: official data → JSON → validation → retrieval → LLM response.</li>
+      <li>Designed automation + pipelines that support real stakeholders (not just notebooks).</li>
+      <li>Bias toward correctness, reliability, and measurable impact.</li>
+    </ul>
+  </details>
+</section>
 
-## 💼 Professional Experience
-
-**Data Analysis Intern – The Marcus Harris Foundation | Remote | Aug 2025 – Present**  
-- Organized and cleaned 1,500+ program records, ensuring accuracy and reliability for analysis  
-- Removed 200+ duplicate entries and harmonized fields, improving dataset quality for reporting  
-- Built 5+ Excel-based visualizations (charts and pivot tables) to track donation trends and participant engagement  
-- Collaborated with cross-functional team members to streamline reporting workflows, reducing data preparation time by 25%  
-
----
-
-## 📁 Featured Projects
-
-### 📊 Marcus Harris Foundation Data Analytics Project | Aug 2025 – Present
-- Cleaned and analyzed 1,500+ rows of donation and attendance data using Python (Pandas, Matplotlib, Seaborn)  
-- Built interactive dashboards in **Power BI** and **Tableau** to visualize donations, attendance, and participant feedback  
-- Performed forecasting for donation trends and conducted sentiment analysis on feedback to guide program improvements  
-- Delivered actionable insights through dashboards and a 5-slide executive report, enabling stakeholders to easily explore program impact.
-
-### ✈️ Airline Reservation System (SQL)
-Simulates a relational airline booking system using MySQL and schema design. Includes table creation, waitlist logic, and booking reports.  
-🔗 [View Project on GitHub →](https://github.com/rajshah1909/Projects/tree/main/Airline_Reservation_System)
-
-### 🎭 Broadway Tableau Dashboard (Excel + Tableau)
-Built from cleaned Broadway revenue data. Visualizes trends in ticket prices, capacity, and top-performing shows across weeks using interactive Tableau dashboards.  
-🔗 [View Project on GitHub →](https://github.com/rajshah1909/Projects/tree/main/Broadway_Tableau_Dashboard)
-
-### 📊 Disney Revenue Analysis (Tableau)
-Analyzed trends in Disney movie gross revenue from 1937 – 2016. Used Tableau for bar, line, and scatter plots with calculated fields and custom metrics.  
-🔗 [View Project on GitHub →](https://github.com/rajshah1909/Projects/tree/main/Disney_Revenue_Analysis)
-
----
-
-## 📚 Coursework Portfolio
-
-Explore my detailed **Rutgers coursework projects**, showcasing hands-on experience in Python, R, SQL, Tableau, Power BI, Excel, and Linux-based development. This includes:
-
-- Data Literacy (R) 🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Data%20Literacy)
-- Statistical Inference (R)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Statistical%20Inference%20for%20Data%20Science)
-- Data Management for Data Science (Python + Jupyter + Excel)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Data%20Management%20for%20Data%20Science)
-- Internet Technologies (Python + Linux)  🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Internet%20Technology)
-- Information Visualization (Tableau + Power BI) 🔗 [View →](https://github.com/rajshah1909/rutgers-coursework/tree/main/Information%20Visulization)
-
-🔗 [View Rutgers Coursework on GitHub →](https://github.com/rajshah1909/rutgers-coursework)
-
----
-
-## 📫 Contact Me
-
-- 📧 **Email:** <a href="mailto:rajshah.ap302@gmail.com" title="Email: rajshah.ap302@gmail.com">rajshah.ap302@gmail.com</a>  
-- 💼 **LinkedIn:** [linkedin.com/in/raj-shah-42985323b](https://www.linkedin.com/in/raj-shah-42985323b/)  
-- 💻 **GitHub:** [github.com/rajshah1909](https://github.com/rajshah1909/Projects)   
-- 🎓 **Handshake:** [handshake.com/profile/rajshah](https://rutgers.joinhandshake.com/profiles/rajshah)
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    <strong>Email:</strong> <a href="mailto:rajshah.ap302@gmail.com">rajshah.ap302@gmail.com</a><br/>
+    <strong>GitHub:</strong> <a href="https://github.com/rajshah1909" target="_blank" rel="noopener">github.com/rajshah1909</a><br/>
+    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/raj-shah-42985323b" target="_blank" rel="noopener">linkedin.com/in/raj-shah-42985323b</a><br/>
+    <strong>Resume:</strong> <a href="{{ '/Raj_Shah_Resume.pdf' | relative_url }}" target="_blank" rel="noopener">PDF</a>
+  </p>
+</section>
