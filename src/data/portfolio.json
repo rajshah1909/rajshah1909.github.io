@@ -1,0 +1,148 @@
+{
+  "profile": {
+    "name": "Raj Shah",
+    "shortName": "Raj",
+    "tagline": "Production AI / ML Engineer building reliable, evaluation-driven AI systems.",
+    "role": "AI / Machine Learning Engineer",
+    "specialization": "Production ML Systems · RAG · Evaluation · Deployment",
+    "location": "New Jersey, USA",
+    "yearsOfExperience": "1+",
+    "bio": "Computer Science + Data Science graduate from Rutgers University. I build AI systems that combine deterministic validation, retrieval grounding, scalable pipelines, and LLM-assisted reasoning.",
+    "avatarImage": "/raj_headshot.JPG",
+    "resumeUrl": "/Raj_Shah_Resume.pdf",
+    "social": {
+      "github": "https://github.com/rajshah1909",
+      "linkedin": "https://www.linkedin.com/in/raj-shah-ai",
+      "email": "rajshah.ap302@gmail.com",
+      "website": "https://rajshah1909.github.io"
+    }
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "AI / ML",
+        "items": [
+          "PyTorch",
+          "Scikit-learn",
+          "XGBoost",
+          "Model Evaluation",
+          "Feature Engineering",
+          "Walk-Forward Validation"
+        ]
+      },
+      {
+        "name": "AI / LLMs",
+        "items": [
+          "NLP",
+          "Transformers (FinBERT)",
+          "LangChain",
+          "RAG Pipelines",
+          "Deterministic Validation"
+        ]
+      },
+      {
+        "name": "Data Engineering",
+        "items": [
+          "ETL/ELT",
+          "Pandas",
+          "NumPy",
+          "Parquet",
+          "Batch Processing",
+          "Data Validation"
+        ]
+      },
+      {
+        "name": "Backend & Deployment",
+        "items": [
+          "Python",
+          "Flask",
+          "FastAPI",
+          "Docker",
+          "REST APIs",
+          "GitHub Actions",
+          "SQL",
+          "AWS"
+        ]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Boundary Remote Subsurface Solutions",
+      "role": "AI & ML Engineer",
+      "period": "Jan 2026 — Present",
+      "location": "Remote",
+      "summary": "Built production-oriented geospatial ML pipelines for subsurface exploration and multimodal data fusion, focusing on preprocessing, validation, evaluation, and batch inference workflows.",
+      "highlights": [
+        "Built an end-to-end ML pipeline classifying lithology across 4 geological datasets, achieving ~68% accuracy.",
+        "Standardized multi-source datasets using Pandas and Parquet, reducing preprocessing errors by ~20%.",
+        "Engineered preprocessing and validation workflows to improve data quality across dynamic batch prediction inputs.",
+        "Developed batch inference pipeline with predict_proba confidence scoring for dynamic prediction inputs."
+      ]
+    },
+    {
+      "company": "The Marcus Harris Foundation",
+      "role": "Data Analyst Intern",
+      "period": "Aug 2025 — Nov 2025",
+      "location": "Remote",
+      "summary": "Delivered stakeholder-facing analytics with validated datasets, ETL workflows, optimized SQL, and Tableau dashboards.",
+      "highlights": [
+        "Cleaned and validated 1,500+ records using SQL and Python, improving data accuracy by ~25%.",
+        "Developed ETL workflows for transformation, reducing manual reporting time by ~25% overall.",
+        "Built Tableau dashboards for 100+ stakeholders, improving KPI reporting efficiency by ~25%.",
+        "Optimized SQL aggregation/filtering queries to improve retrieval efficiency and processing speed."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "ru-path",
+      "title": "RU-PATH: AI-Powered Campus Parking & Transit Chatbot",
+      "subtitle": "RAG + deterministic validation + multi-engine routing",
+      "description": "Built a RAG-based AI assistant for Rutgers campus navigation, parking, and transit queries using authoritative datasets, retrieval grounding, and deterministic validation logic. Implemented semantic search + NLU intent routing across chatbot, parking logic, and routing engines, exposed via Flask REST APIs, and deployed with Docker + GitHub Actions.",
+      "stack": ["Python", "LangChain", "RAG", "Flask", "Docker", "GitHub Actions"],
+      "year": "2025",
+      "link": "https://github.com/rajshah1909/ru-path",
+      "highlight": true,
+      "metrics": "~89% response accuracy · 99% uptime"
+    },
+    {
+      "id": "decoding-the-fed",
+      "title": "Decoding the Fed: NLP-Based Yield Prediction",
+      "subtitle": "FinBERT + TF-IDF drift + walk-forward validation",
+      "description": "Built a finance-focused NLP pipeline using 189 FOMC statements and Treasury yield data (1994–2024). Extracted sentiment/policy signals using TF-IDF drift analysis, FinBERT embeddings, and hawkish/dovish lexicons before training Random Forest, Lasso, Ridge, Logistic Regression, and XGBoost with walk-forward validation to reduce time-series leakage.",
+      "stack": ["Python", "FinBERT", "XGBoost", "NLP", "Time-Series ML"],
+      "year": "2026",
+      "highlight": true,
+      "metrics": "0.0865 RMSE (2Y) · 0.529 accuracy · 0.426 F1"
+    },
+    {
+      "id": "data-pipeline",
+      "title": "Automated Data Collection & Analysis Pipeline",
+      "subtitle": "Python + SQL analytics pipeline with validation",
+      "description": "Built an automated Python + SQL analytics pipeline that reduced manual preprocessing time by ~80%, enforced validation checks, and generated Tableau-ready outputs for 100+ stakeholders.",
+      "stack": ["Python", "SQL", "ETL", "Data Validation", "Tableau"],
+      "year": "2025",
+      "link": "https://github.com/rajshah1909/Projects",
+      "metrics": "~80% time reduction · 100+ stakeholders"
+    },
+    {
+      "id": "evac-ai",
+      "title": "Evac AI — AI Disaster Response Platform",
+      "subtitle": "FastAPI backend + risk scoring + real-time integrations",
+      "description": "Built a FastAPI backend integrating weather, alerts, geolocation, and AI evacuation workflows. Developed a risk scoring pipeline using live weather/disaster alerts and nearby resources, and connected iOS and web applications via modular REST APIs for scalable disaster response support.",
+      "stack": ["FastAPI", "Python", "REST APIs", "Risk Scoring", "Docker"],
+      "year": "2026"
+    }
+  ],
+  "education": [
+    {
+      "school": "Rutgers University, New Brunswick, NJ",
+      "degree": "B.S. Computer Science & Data Science (Honors), GPA 3.79",
+      "period": "2022 — 2026",
+      "details": "Dean’s List (Multiple Semesters, 2023–2026) · Phi Theta Kappa Honor Society"
+    }
+  ],
+  "testimonials": []
+}
+
