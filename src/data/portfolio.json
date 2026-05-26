@@ -4,7 +4,7 @@
     "shortName": "Raj",
     "tagline": "Production AI / ML Engineer building reliable, evaluation-driven AI systems.",
     "role": "AI / Machine Learning Engineer",
-    "specialization": "Production ML Systems · RAG · Evaluation · Deployment",
+    "specialization": "Production ML Systems \u00b7 RAG \u00b7 Evaluation \u00b7 Deployment",
     "location": "New Jersey, USA",
     "yearsOfExperience": "1+",
     "bio": "Computer Science + Data Science graduate from Rutgers University. I build AI systems that combine deterministic validation, retrieval grounding, scalable pipelines, and LLM-assisted reasoning.",
@@ -70,7 +70,7 @@
     {
       "company": "Boundary Remote Subsurface Solutions",
       "role": "AI & ML Engineer",
-      "period": "Jan 2026 — Present",
+      "period": "Jan 2026 \u2014 Present",
       "location": "Remote",
       "summary": "Built production-oriented geospatial ML pipelines for subsurface exploration and multimodal data fusion, focusing on preprocessing, validation, evaluation, and batch inference workflows.",
       "highlights": [
@@ -83,7 +83,7 @@
     {
       "company": "The Marcus Harris Foundation",
       "role": "Data Analyst Intern",
-      "period": "Aug 2025 — Nov 2025",
+      "period": "Aug 2025 \u2014 Nov 2025",
       "location": "Remote",
       "summary": "Delivered stakeholder-facing analytics with validated datasets, ETL workflows, optimized SQL, and Tableau dashboards.",
       "highlights": [
@@ -96,53 +96,145 @@
   ],
   "projects": [
     {
-      "id": "ru-path",
-      "title": "RU-PATH: AI-Powered Campus Parking & Transit Chatbot",
-      "subtitle": "RAG + deterministic validation + multi-engine routing",
-      "description": "Built a RAG-based AI assistant for Rutgers campus navigation, parking, and transit queries using authoritative datasets, retrieval grounding, and deterministic validation logic. Implemented semantic search + NLU intent routing across chatbot, parking logic, and routing engines, exposed via Flask REST APIs, and deployed with Docker + GitHub Actions.",
-      "stack": ["Python", "LangChain", "RAG", "Flask", "Docker", "GitHub Actions"],
-      "year": "2025",
-      "link": "https://github.com/rajshah1909/ru-path",
+      "id": "evac-ai",
+      "title": "EvacAI \u2014 AI-Powered Disaster Preparedness Platform",
+      "subtitle": "IBM Z \u00d7 UNSA Hackathon \u00b7 iOS + deployed web platform",
+      "description": "Built EvacAI to help users respond during floods, hurricanes, wildfires, earthquakes, and severe weather with live weather, disaster alerts, shelters, ML-based risk scoring, and AI-generated evacuation plans. FastAPI backend integrates geocoding, alerts, weather, resources, and planning; IBM watsonx/Granite and Cloud Object Storage power AI response planning.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "SwiftUI",
+        "IBM watsonx",
+        "IBM Granite",
+        "REST APIs",
+        "Machine Learning"
+      ],
+      "year": "2026",
+      "period": "May 2026",
       "highlight": true,
-      "metrics": "~89% response accuracy · 99% uptime"
+      "metrics": "Full-stack platform \u00b7 Live weather + risk scoring \u00b7 Global location support",
+      "repoLink": "https://github.com/milipatel1309/EvacAI",
+      "demoLink": "https://evac-ai.onrender.com/"
     },
     {
       "id": "decoding-the-fed",
-      "title": "Decoding the Fed: NLP-Based Yield Prediction",
-      "subtitle": "FinBERT + TF-IDF drift + walk-forward validation",
-      "description": "Built a finance-focused NLP pipeline using 189 FOMC statements and Treasury yield data (1994–2024). Extracted sentiment/policy signals using TF-IDF drift analysis, FinBERT embeddings, and hawkish/dovish lexicons before training Random Forest, Lasso, Ridge, Logistic Regression, and XGBoost with walk-forward validation to reduce time-series leakage.",
-      "stack": ["Python", "FinBERT", "XGBoost", "NLP", "Time-Series ML"],
+      "title": "FOMC Yield Curve Prediction Using NLP & Machine Learning",
+      "subtitle": "189 FOMC statements (1994\u20132024) + FRED macro features",
+      "description": "Predicted short-term U.S. Treasury yield movements using Federal Reserve language and macro data. Engineered NLP features with TF-IDF drift, hawkish/dovish lexicons, and FinBERT sentiment; trained Ridge, Lasso, Random Forest, and XGBoost with walk-forward validation to reduce look-ahead bias.",
+      "stack": [
+        "Python",
+        "FinBERT",
+        "TF-IDF",
+        "XGBoost",
+        "Random Forest",
+        "FRED API",
+        "NLP"
+      ],
       "year": "2026",
+      "period": "Jan 2026 \u2014 May 2026",
       "highlight": true,
-      "metrics": "0.0865 RMSE (2Y) · 0.529 accuracy · 0.426 F1"
+      "metrics": "0.0865 RMSE (2Y) \u00b7 Walk-forward validation \u00b7 NeurIPS-style paper",
+      "repoLink": "https://github.com/rajshah1909/ds-project"
+    },
+    {
+      "id": "ru-path",
+      "title": "RU-PATH \u2014 AI-Powered Parking & Transit Chatbot",
+      "subtitle": "Rutgers-focused RAG assistant for parking + bus routing",
+      "description": "Built a LangChain + DeepSeek RAG chatbot covering 5 permit types and 6 bus routes with semantic search, NLU intent routing, and modular parking/routing engines. Flask REST APIs support real-time multi-turn queries across campuses; deployed with Docker, GitHub Actions, and Render.",
+      "stack": [
+        "Python",
+        "LangChain",
+        "RAG",
+        "Flask",
+        "Docker",
+        "GitHub Actions",
+        "DeepSeek API"
+      ],
+      "year": "2025",
+      "period": "Sep 2025 \u2014 Dec 2025",
+      "highlight": true,
+      "metrics": "~89% response accuracy \u00b7 99% production uptime \u00b7 1,500+ lines modular Python",
+      "repoLink": "https://github.com/rajshah1909/ru-path",
+      "demoLink": "https://youtu.be/XkFiByMFBlc"
+    },
+    {
+      "id": "cnn-digits",
+      "title": "Handwritten Digit Classification with Deep Learning",
+      "subtitle": "LeNet + STN-LeNet on MNIST (PyTorch)",
+      "description": "Built CNN image classifiers in PyTorch with data preprocessing and augmentation, achieving 98.9% test accuracy and reducing classification error by ~35%. Used cross-validation and hyperparameter tuning to improve validation accuracy and analyzed predictions with confusion matrices.",
+      "stack": [
+        "PyTorch",
+        "CNN",
+        "Deep Learning",
+        "Model Evaluation",
+        "Hyperparameter Tuning"
+      ],
+      "year": "2025",
+      "period": "Sep 2025 \u2014 Dec 2025",
+      "metrics": "98.9% test accuracy \u00b7 ~35% error reduction",
+      "repoLink": "https://github.com/rajshah1909/rutgers-coursework/tree/main/Machine%20Learning/HW4"
     },
     {
       "id": "data-pipeline",
       "title": "Automated Data Collection & Analysis Pipeline",
-      "subtitle": "Python + SQL analytics pipeline with validation",
-      "description": "Built an automated Python + SQL analytics pipeline that reduced manual preprocessing time by ~80%, enforced validation checks, and generated Tableau-ready outputs for 100+ stakeholders.",
-      "stack": ["Python", "SQL", "ETL", "Data Validation", "Tableau"],
+      "subtitle": "The Marcus Harris Foundation \u00b7 Python + Selenium + SQL ETL",
+      "description": "Built an end-to-end ETL pipeline processing 1,000+ records with validation and deduplication, cutting manual collection from 10+ hours/week to under 2 hours (~80% reduction). Generated automated dashboards and reports for 100+ stakeholders.",
+      "stack": [
+        "Python",
+        "SQL",
+        "Selenium",
+        "ETL",
+        "Data Validation",
+        "Tableau"
+      ],
       "year": "2025",
-      "link": "https://github.com/rajshah1909/Projects",
-      "metrics": "~80% time reduction · 100+ stakeholders"
+      "period": "Aug 2025 \u2014 Sep 2025",
+      "metrics": "~80% time reduction \u00b7 200+ inconsistent records removed \u00b7 100+ stakeholders"
     },
     {
-      "id": "evac-ai",
-      "title": "Evac AI — AI Disaster Response Platform",
-      "subtitle": "FastAPI backend + risk scoring + real-time integrations",
-      "description": "Built a FastAPI backend integrating weather, alerts, geolocation, and AI evacuation workflows. Developed a risk scoring pipeline using live weather/disaster alerts and nearby resources, and connected iOS and web applications via modular REST APIs for scalable disaster response support.",
-      "stack": ["FastAPI", "Python", "REST APIs", "Risk Scoring", "Docker"],
-      "year": "2026"
+      "id": "broadway",
+      "title": "Broadway Grosses Analysis & Dashboard",
+      "subtitle": "Python + SQL analytics with Tableau storytelling",
+      "description": "Analyzed 2,000+ Broadway gross revenue records to surface pricing, attendance, and capacity trends. Improved dataset accuracy by ~20% through cleaning workflows and built interactive Tableau dashboards; applied linear regression (R) for forecasting (R\u00b2 ~0.70+).",
+      "stack": [
+        "Python",
+        "SQL",
+        "Tableau",
+        "R",
+        "Linear Regression",
+        "Data Visualization"
+      ],
+      "year": "2025",
+      "period": "May 2025 \u2014 Jul 2025",
+      "metrics": "~20% accuracy improvement \u00b7 R\u00b2 ~0.70+ forecasting"
+    },
+    {
+      "id": "airline",
+      "title": "Airline Booking & Reservation Management System",
+      "subtitle": "Java + MySQL full-stack reservation system",
+      "description": "Developed a full-stack airline reservation system with RBAC for customers, admins, and representatives. Built flight search/filtering, booking lifecycle workflows (confirmation, cancellation, waitlist), normalized MySQL schema, and admin/support modules.",
+      "stack": [
+        "Java",
+        "MySQL",
+        "SQL",
+        "RBAC",
+        "Backend Development",
+        "System Design"
+      ],
+      "year": "2025",
+      "period": "Mar 2025 \u2014 May 2025",
+      "metrics": "Normalized schema \u00b7 ~25% query performance improvement",
+      "repoLink": "https://github.com/rajshah1909/Projects/tree/main/Airline_Reservation_System",
+      "demoLink": "https://www.youtube.com/watch?v=QSdlH-vjGOA"
     }
   ],
   "education": [
     {
       "school": "Rutgers University, New Brunswick, NJ",
       "degree": "B.S. Computer Science & Data Science (Honors), GPA 3.79",
-      "period": "2022 — 2026",
-      "details": "Dean’s List (Multiple Semesters, 2023–2026) · Phi Theta Kappa Honor Society"
+      "period": "2022 \u2014 2026",
+      "details": "Dean's List (Multiple Semesters, 2023\u20132026) \u00b7 Phi Theta Kappa Honor Society"
     }
   ],
   "testimonials": []
 }
-
