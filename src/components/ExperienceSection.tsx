@@ -16,7 +16,7 @@ export function ExperienceSection() {
     <SectionShell
       id="experience"
       title="Experience"
-      subtitle="Roles focused on shipping production-oriented ML + analytics."
+      subtitle="Production ML, geospatial AI, and data systems with measurable impact."
     >
       <div className="space-y-6">
         {experience.map((e, idx) => (
@@ -45,7 +45,7 @@ export function ExperienceSection() {
             <p className="mt-4 max-w-4xl text-white/70">{e.summary}</p>
 
             <ul className="mt-4 grid gap-2 text-sm text-white/70 md:grid-cols-2">
-              {e.highlights.slice(0, 4).map((h) => (
+              {e.highlights.slice(0, 6).map((h) => (
                 <li key={h} className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3">
                   {h}
                 </li>
