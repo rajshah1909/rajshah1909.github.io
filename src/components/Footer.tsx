@@ -36,7 +36,7 @@ export function Footer() {
               <a className="hover:text-white" href="#about">About</a>
               <a className="hover:text-white" href="#experience">Experience</a>
               <a className="hover:text-white" href="#projects">Projects</a>
-              <a className="hover:text-white" href="#skills">Stack</a>
+              <a className="hover:text-white" href="#services">What I Build</a>
             </div>
           </div>
 

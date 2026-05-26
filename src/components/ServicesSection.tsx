@@ -29,7 +29,7 @@ export function ServicesSection() {
     <SectionShell
       id="services"
       title="What I Build"
-      subtitle="A production-first skill set: pipelines, evaluation, and reliable deployment."
+      subtitle="Capabilities I ship in production — pipelines, evaluation, and reliable deployment."
     >
       <div className="grid gap-4 md:grid-cols-2">
         {services.map((s, idx) => (
