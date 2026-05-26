@@ -17,55 +17,6 @@
       "website": "https://rajshah1909.github.io"
     }
   },
-  "skills": {
-    "categories": [
-      {
-        "name": "AI / ML",
-        "items": [
-          "PyTorch",
-          "Scikit-learn",
-          "XGBoost",
-          "Model Evaluation",
-          "Feature Engineering",
-          "Walk-Forward Validation"
-        ]
-      },
-      {
-        "name": "AI / LLMs",
-        "items": [
-          "NLP",
-          "Transformers (FinBERT)",
-          "LangChain",
-          "RAG Pipelines",
-          "Deterministic Validation"
-        ]
-      },
-      {
-        "name": "Data Engineering",
-        "items": [
-          "ETL/ELT",
-          "Pandas",
-          "NumPy",
-          "Parquet",
-          "Batch Processing",
-          "Data Validation"
-        ]
-      },
-      {
-        "name": "Backend & Deployment",
-        "items": [
-          "Python",
-          "Flask",
-          "FastAPI",
-          "Docker",
-          "REST APIs",
-          "GitHub Actions",
-          "SQL",
-          "AWS"
-        ]
-      }
-    ]
-  },
   "experience": [
     {
       "company": "Boundary Remote Subsurface Solutions",
@@ -236,5 +187,90 @@
       "details": "Dean's List (Multiple Semesters, 2023\u20132026) \u00b7 Phi Theta Kappa Honor Society"
     }
   ],
-  "testimonials": []
+  "testimonials": [],
+  "capabilities": [
+    {
+      "id": "ai",
+      "title": "AI",
+      "focus": "RAG assistants, LLM integration, NLP feature engineering, and policy-text analysis.",
+      "tools": [
+        "LangChain",
+        "RAG",
+        "DeepSeek API",
+        "NLP",
+        "FinBERT",
+        "TF-IDF",
+        "IBM watsonx",
+        "IBM Granite",
+        "Deterministic Validation"
+      ]
+    },
+    {
+      "id": "ml",
+      "title": "ML",
+      "focus": "Supervised learning, deep learning, evaluation, and time-series forecasting.",
+      "tools": [
+        "PyTorch",
+        "Scikit-learn",
+        "XGBoost",
+        "Random Forest",
+        "CNN",
+        "Deep Learning",
+        "Model Evaluation",
+        "Hyperparameter Tuning",
+        "Walk-Forward Validation",
+        "FRED API",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "programming",
+      "title": "Programming",
+      "focus": "Backend APIs, system design, and full-stack application development.",
+      "tools": [
+        "Python",
+        "Java",
+        "SQL",
+        "R",
+        "FastAPI",
+        "Flask",
+        "REST APIs",
+        "SwiftUI",
+        "RBAC",
+        "System Design",
+        "Backend Development"
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data",
+      "focus": "ETL pipelines, data quality, analytics, and stakeholder-ready reporting.",
+      "tools": [
+        "Pandas",
+        "NumPy",
+        "Parquet",
+        "ETL",
+        "Selenium",
+        "Data Validation",
+        "MySQL",
+        "Tableau",
+        "Data Visualization",
+        "Linear Regression",
+        "Batch Processing"
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud",
+      "focus": "Containerized deployment, CI/CD, and reliable production iteration.",
+      "tools": [
+        "Docker",
+        "GitHub Actions",
+        "AWS",
+        "Render",
+        "CI/CD",
+        "IBM Cloud Object Storage"
+      ]
+    }
+  ]
 }

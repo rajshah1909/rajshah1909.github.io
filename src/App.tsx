@@ -5,7 +5,6 @@ import { HeroSection } from "./components/HeroSection";
 import { Navbar } from "./components/Navbar";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { ServicesSection } from "./components/ServicesSection";
-import { SkillsSection } from "./components/SkillsSection";
 import { TestimonialsSection } from "./components/TestimonialsSection";
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
         <AboutSection />
         <ExperienceSection />
         <ServicesSection />
-        <SkillsSection />
         <ProjectsSection />
         <TestimonialsSection />
       </main>
