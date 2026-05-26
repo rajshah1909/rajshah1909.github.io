@@ -2,12 +2,12 @@
   "profile": {
     "name": "Raj Shah",
     "shortName": "Raj",
-    "tagline": "Production AI / ML Engineer building reliable, evaluation-driven AI systems.",
+    "tagline": "AI & ML Engineer building geospatial AI systems, RAG applications, and production ML pipelines.",
     "role": "AI / Machine Learning Engineer",
     "specialization": "Production ML Systems \u00b7 RAG \u00b7 Evaluation \u00b7 Deployment",
     "location": "New Jersey, USA",
     "yearsOfExperience": "1+",
-    "bio": "Computer Science + Data Science graduate from Rutgers University. I build AI systems that combine deterministic validation, retrieval grounding, scalable pipelines, and LLM-assisted reasoning.",
+    "bio": "I am a Computer Science and Data Science graduate from Rutgers University with Honors in both majors, a 3.792 GPA, and multiple Dean's List recognitions. Currently, I work as an AI & ML Engineer at Boundary RSS, where I build end-to-end machine learning pipelines, scalable inference systems, preprocessing workflows, and production-style AI solutions across large geological datasets. My work spans Python, SQL, Pandas, Scikit-learn, Parquet, ETL pipelines, data validation, confidence scoring, and backend ML workflows designed for scalable prediction and downstream analytics integration.\n\nI enjoy building practical AI systems that solve real-world problems. I have developed AI-powered RAG chatbots using LangChain and DeepSeek APIs, built FastAPI-based AI applications integrating IBM Cloud and real-time APIs, and worked on NLP-driven financial prediction systems using FinBERT, XGBoost, Random Forest, and time-series machine learning models. My focus is Generative AI, AI infrastructure, ML engineering, backend AI systems, LLM workflows, AI agents, cloud deployment, and production-scale applications where engineering and business impact align.",
     "avatarImage": "/raj_headshot.JPG",
     "resumeUrl": "/Raj_Shah_Resume.pdf",
     "social": {
@@ -22,26 +22,28 @@
       "company": "Boundary Remote Subsurface Solutions",
       "role": "AI & ML Engineer",
       "period": "Jan 2026 \u2014 Present",
-      "location": "Remote",
-      "summary": "Built production-oriented geospatial ML pipelines for subsurface exploration and multimodal data fusion, focusing on preprocessing, validation, evaluation, and batch inference workflows.",
+      "location": "Los Angeles, California \u00b7 Remote",
+      "summary": "Contribute to a production-oriented Geospatial AI agent framework for subsurface exploration, reservoir characterization, and hydrocarbon analytics \u2014 improving architecture, scalability, and integration readiness across Python ML pipelines and multimodal data workflows.",
       "highlights": [
-        "Built an end-to-end ML pipeline classifying lithology across 4 geological datasets, achieving ~68% accuracy.",
-        "Standardized multi-source datasets using Pandas and Parquet, reducing preprocessing errors by ~20%.",
-        "Engineered preprocessing and validation workflows to improve data quality across dynamic batch prediction inputs.",
-        "Developed batch inference pipeline with predict_proba confidence scoring for dynamic prediction inputs."
+        "Built and optimized well-log ML pipelines (Pandas, NumPy), reducing preprocessing errors from ~20% to <5%.",
+        "Trained and evaluated models using MSE, RMSE, and R\u00b2 \u2014 RMSE \u2193 ~15\u201320%, R\u00b2 improved from ~0.65 to ~0.78.",
+        "Integrated and validated 13+ heterogeneous datasets (seismic, well-log, gravity, magnetic, hyperspectral, SAR, EM, thermal, geochemical) for multimodal fusion.",
+        "Developed Subsurface Characterization AI modules with open-source geospatial + ML libraries for scalable ingestion.",
+        "Automated preprocessing \u2192 inference \u2192 post-processing workflows, cutting manual effort by ~40%.",
+        "Supported API-based integration into distributed AI systems with GIS compatibility (QGIS, ArcGIS, Google Earth)."
       ]
     },
     {
       "company": "The Marcus Harris Foundation",
-      "role": "Data Analyst Intern",
+      "role": "Data Entry & Analysis Intern",
       "period": "Aug 2025 \u2014 Nov 2025",
       "location": "Remote",
-      "summary": "Delivered stakeholder-facing analytics with validated datasets, ETL workflows, optimized SQL, and Tableau dashboards.",
+      "summary": "Delivered validated datasets, SQL/Python analytics, Tableau dashboards, and KPI insights for leadership and outreach strategy.",
       "highlights": [
-        "Cleaned and validated 1,500+ records using SQL and Python, improving data accuracy by ~25%.",
-        "Developed ETL workflows for transformation, reducing manual reporting time by ~25% overall.",
-        "Built Tableau dashboards for 100+ stakeholders, improving KPI reporting efficiency by ~25%.",
-        "Optimized SQL aggregation/filtering queries to improve retrieval efficiency and processing speed."
+        "Cleaned and validated 1,500+ records with SQL and Python (Pandas, NumPy), improving data accuracy by ~25%.",
+        "Performed EDA to identify trends, correlations, and donor behavior patterns for KPI-driven decisions.",
+        "Wrote optimized SQL (JOINs, GROUP BY, aggregations), reducing manual processing time by ~30%.",
+        "Built interactive Tableau dashboards for KPIs and performance metrics, improving stakeholder reporting efficiency."
       ]
     }
   ],
@@ -182,7 +184,7 @@
   "education": [
     {
       "school": "Rutgers University, New Brunswick, NJ",
-      "degree": "B.S. Computer Science & Data Science (Honors), GPA 3.79",
+      "degree": "B.S. Computer Science & Data Science (Honors), GPA 3.792",
       "period": "2022 \u2014 2026",
       "details": "Dean's List (Multiple Semesters, 2023\u20132026) \u00b7 Phi Theta Kappa Honor Society"
     }
