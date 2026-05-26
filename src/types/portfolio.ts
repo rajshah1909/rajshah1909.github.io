@@ -21,6 +21,14 @@ export type Profile = {
   resumeUrl?: string;
 };
 
+
+export type Capability = {
+  id: string;
+  title: string;
+  items: string[];
+  tools: string[];
+};
+
 export type SkillCategory = {
   name: string;
   items: string[];
@@ -69,9 +77,7 @@ export type Testimonial = {
 
 export type PortfolioData = {
   profile: Profile;
-  skills: {
-    categories: SkillCategory[];
-  };
+  capabilities: Capability[];
   experience: Experience[];
   projects: Project[];
   education: Education[];

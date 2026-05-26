@@ -17,55 +17,6 @@
       "website": "https://rajshah1909.github.io"
     }
   },
-  "skills": {
-    "categories": [
-      {
-        "name": "AI / ML",
-        "items": [
-          "PyTorch",
-          "Scikit-learn",
-          "XGBoost",
-          "Model Evaluation",
-          "Feature Engineering",
-          "Walk-Forward Validation"
-        ]
-      },
-      {
-        "name": "AI / LLMs",
-        "items": [
-          "NLP",
-          "Transformers (FinBERT)",
-          "LangChain",
-          "RAG Pipelines",
-          "Deterministic Validation"
-        ]
-      },
-      {
-        "name": "Data Engineering",
-        "items": [
-          "ETL/ELT",
-          "Pandas",
-          "NumPy",
-          "Parquet",
-          "Batch Processing",
-          "Data Validation"
-        ]
-      },
-      {
-        "name": "Backend & Deployment",
-        "items": [
-          "Python",
-          "Flask",
-          "FastAPI",
-          "Docker",
-          "REST APIs",
-          "GitHub Actions",
-          "SQL",
-          "AWS"
-        ]
-      }
-    ]
-  },
   "experience": [
     {
       "company": "Boundary Remote Subsurface Solutions",
@@ -236,5 +187,81 @@
       "details": "Dean's List (Multiple Semesters, 2023\u20132026) \u00b7 Phi Theta Kappa Honor Society"
     }
   ],
-  "testimonials": []
+  "testimonials": [],
+  "capabilities": [
+    {
+      "id": "backend",
+      "title": "Backend",
+      "items": [
+        "FastAPI / Flask APIs",
+        "Batch pipelines",
+        "Validation layers",
+        "SQL analytics"
+      ],
+      "tools": [
+        "Python",
+        "Flask",
+        "FastAPI",
+        "SQL",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "ai-llm",
+      "title": "AI / LLM",
+      "items": [
+        "RAG architectures",
+        "Evaluation pipelines",
+        "Failure-mode analysis",
+        "Deterministic validation"
+      ],
+      "tools": [
+        "PyTorch",
+        "Scikit-learn",
+        "XGBoost",
+        "NLP",
+        "FinBERT",
+        "LangChain",
+        "RAG Pipelines",
+        "Model Evaluation",
+        "Walk-Forward Validation"
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data",
+      "items": [
+        "ETL/ELT",
+        "Parquet datasets",
+        "Data quality checks",
+        "Stakeholder-ready outputs"
+      ],
+      "tools": [
+        "Pandas",
+        "NumPy",
+        "Parquet",
+        "ETL/ELT",
+        "Batch Processing",
+        "Data Validation",
+        "Tableau"
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud",
+      "items": [
+        "Dockerized deployment",
+        "CI/CD via GitHub Actions",
+        "Monitoring mindset",
+        "Reliable iteration loops"
+      ],
+      "tools": [
+        "Docker",
+        "GitHub Actions",
+        "AWS",
+        "Render",
+        "CI/CD"
+      ]
+    }
+  ]
 }
