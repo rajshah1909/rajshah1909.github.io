@@ -440,7 +440,7 @@
       <div class="topbar-inner">
         <a href="#top" class="brand">
           <span class="brand-mark">RS</span>
-          <span>Raj Shah</span>
+          <span>{{ site.data.portfolio.profile.name }}</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <a href="#experience">Experience</a>
@@ -465,27 +465,24 @@
           <img src="{{ '/raj_headshot.JPG' | relative_url }}" alt="Raj Shah" width="140" height="156">
         </div>
         <div class="hero-content">
-          <p class="hero-eyebrow">Production AI / ML Engineer</p>
-          <h1>Raj Shah</h1>
+          <p class="hero-eyebrow">{{ site.data.portfolio.profile.hero_eyebrow }}</p>
+          <h1>{{ site.data.portfolio.profile.name }}</h1>
           <p class="hero-subtitle">
-            AI / Machine Learning Engineer focused on production ML systems,
-            RAG architectures, evaluation pipelines, and reliable AI deployment.
+            {{ site.data.portfolio.profile.hero_subtitle }}
           </p>
           <p class="hero-description">
-            Computer Science + Data Science graduate from Rutgers University.
-            I build AI systems that combine deterministic validation,
-            retrieval grounding, scalable pipelines, and LLM-assisted reasoning.
+            {{ site.data.portfolio.profile.hero_description }}
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="{{ '/Raj_Shah_Resume.pdf' | relative_url }}" target="_blank" rel="noopener">Resume</a>
-            <a class="button secondary" href="https://github.com/rajshah1909" target="_blank" rel="noopener">GitHub</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/raj-shah-ai" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="button primary" href="{{ site.data.portfolio.profile.resume_url | relative_url }}" target="_blank" rel="noopener">Resume</a>
+            <a class="button secondary" href="{{ site.data.portfolio.profile.social.github }}" target="_blank" rel="noopener">GitHub</a>
+            <a class="button secondary" href="{{ site.data.portfolio.profile.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </section>
 
       <div class="availability-banner reveal">
-        <span>Open to</span> Full-Time AI / ML Engineering Opportunities
+        <span>{{ site.data.portfolio.availability_banner_prefix }}</span> {{ site.data.portfolio.availability_banner_text }}
       </div>
 
       <main class="reveal">
