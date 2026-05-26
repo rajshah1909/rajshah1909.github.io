@@ -44,6 +44,9 @@ export type Project = {
   role?: string;
   year?: string;
   link?: string;
+  repoLink?: string;
+  demoLink?: string;
+  period?: string;
   image?: string;
   highlight?: boolean;
   metrics?: string;
