@@ -1,0 +1,187 @@
+# Portfolio content layer (edit values here)
+
+profile:
+  name: "Raj Shah"
+  hero_eyebrow: "Production AI / ML Engineer"
+  hero_subtitle: "AI / Machine Learning Engineer focused on production ML systems, RAG architectures, evaluation pipelines, and reliable AI deployment."
+  hero_description: >-
+    Computer Science + Data Science graduate from Rutgers University.
+    I build AI systems that combine deterministic validation, retrieval grounding,
+    scalable pipelines, and LLM-assisted reasoning.
+  resume_url: "/Raj_Shah_Resume.pdf"
+  social:
+    github: "https://github.com/rajshah1909"
+    linkedin: "https://www.linkedin.com/in/raj-shah-ai"
+    email: "rajshah.ap302@gmail.com"
+
+availability_banner_prefix: "Open to"
+availability_banner_text: "Full-Time AI / ML Engineering Opportunities"
+
+experience:
+  - label: "Current"
+    title: "AI & ML Engineer — Boundary Remote Subsurface Solutions"
+    period: "Jan 2026 – Present"
+    summary: >-
+      Contributing to a production-oriented Geospatial AI framework for subsurface exploration
+      and multimodal data fusion. Built end-to-end ML pipelines classifying lithology across
+      geological datasets, standardized multi-source ingestion with Pandas and Parquet, and
+      engineered preprocessing, validation, and batch inference workflows across 13+
+      heterogeneous datasets.
+    metric: "~68% lithology classification accuracy · ~20% fewer preprocessing errors"
+    tags:
+      - "Python"
+      - "ML Pipelines"
+      - "Geospatial AI"
+      - "Model Evaluation"
+      - "Data Validation"
+      - "Multimodal AI"
+      - "Parquet"
+
+  - title: "Data Analyst Intern — The Marcus Harris Foundation"
+    period: "Aug 2025 – Nov 2025"
+    summary: >-
+      Cleaned and validated 1,500+ records with SQL and Python, built ETL workflows
+      that cut manual reporting time by ~25%, and delivered Tableau dashboards for
+      100+ stakeholders with optimized aggregation queries for faster KPI reporting.
+    metric: "~25% data accuracy improvement · ~25% faster KPI reporting"
+    tags:
+      - "Python"
+      - "SQL"
+      - "ETL"
+      - "Tableau"
+      - "EDA"
+
+projects:
+  - featured: true
+    card_label: "Flagship · NLP + Time-Series ML"
+    title: "Decoding the Fed — FOMC Yield Curve Prediction System"
+    period: "Jan 2026 – May 2026"
+    description: >-
+      Engineered an NLP + ML forecasting pipeline using 189 Federal Reserve statements
+      and Treasury yield data (1994–2024). Extracted sentiment and policy signals via
+      TF-IDF drift analysis, FinBERT embeddings, and hawkish/dovish lexicons, then trained
+      Random Forest, Lasso, Ridge, Logistic Regression, and XGBoost with walk-forward
+      validation to predict Treasury yield movement across 1-, 3-, and 5-day windows.
+    metric: "0.0865 RMSE (2Y) · 0.529 accuracy / 0.426 F1 on spread direction"
+    tags:
+      - "Python"
+      - "FinBERT"
+      - "XGBoost"
+      - "NLP"
+      - "Time-Series ML"
+      - "Walk-Forward Validation"
+
+  - featured: true
+    card_label: "Flagship · RAG + Production Deployment"
+    title: "RU-PATH — AI Campus Navigation & Parking Assistant"
+    period: "Sept 2025 – Dec 2025"
+    description: >-
+      Built a RAG-based AI assistant for Rutgers campus navigation, parking, and transit
+      queries using authoritative datasets, retrieval grounding, and deterministic validation
+      logic. Developed chatbot, parking, and routing engines across modular Python with
+      Flask REST APIs, semantic search, and NLU intent routing — deployed via Docker,
+      GitHub Actions, and Render.
+    metric: "~89% response accuracy · 99% production uptime"
+    tags:
+      - "LangChain"
+      - "RAG"
+      - "DeepSeek API"
+      - "Flask"
+      - "Docker"
+      - "GitHub Actions"
+    actions:
+      - label: "Repository"
+        url: "https://github.com/rajshah1909/ru-path"
+      - label: "Demo Video"
+        url: "https://youtu.be/XkFiByMFBlc"
+
+  - featured: false
+    card_label: "Geospatial AI · Production ML"
+    title: "Boundary RSS — Lithology Classification & ML Pipelines"
+    period: "Professional · 2026"
+    description: >-
+      Built end-to-end ML preprocessing and batch inference pipelines for subsurface
+      geospatial data fusion — including predict_proba confidence scoring, validation
+      workflows for dynamic batch inputs, and standardized Parquet-based dataset ingestion
+      across heterogeneous geological sources.
+    metric: "4 geological datasets · 13+ integrated data sources"
+    tags:
+      - "Python"
+      - "Scikit-learn"
+      - "Pandas"
+      - "Batch Inference"
+      - "Geospatial AI"
+
+  - featured: false
+    title: "Automated Data Collection & Analysis Pipeline"
+    description: >-
+      Built an automated Python + SQL analytics pipeline that reduced manual preprocessing
+      time by ~80%, enforced validation checks, and generated Tableau-ready outputs for
+      100+ stakeholders — turning 10+ hours/week of prep into under 2 hours.
+    metric: "~80% time reduction · 100+ dashboard users"
+    tags:
+      - "Python"
+      - "SQL"
+      - "Data Validation"
+      - "Tableau"
+      - "ETL"
+    actions:
+      - label: "Repository"
+        url: "https://github.com/rajshah1909/Projects"
+
+  - featured: false
+    title: "Evac AI — AI Disaster Response Platform"
+    period: "IBM Z × UNSA Hackathon · Mar 2026 – May 2026"
+    description: >-
+      Built a FastAPI backend integrating weather, alerts, geolocation, and AI evacuation
+      workflows with live risk scoring and modular REST APIs connecting iOS and web clients
+      for scalable disaster preparedness.
+    tags:
+      - "FastAPI"
+      - "REST APIs"
+      - "Risk Scoring"
+      - "Real-Time AI"
+      - "Docker"
+
+  - featured: false
+    title: "Broadway Revenue Dashboard"
+    description: >-
+      Cleaned and analyzed Broadway gross revenue data and built interactive Tableau
+      dashboards visualizing pricing, capacity, and weekly performance trends with clear
+      stakeholder storytelling.
+    tags:
+      - "Tableau"
+      - "Data Storytelling"
+      - "EDA"
+    actions:
+      - label: "Repository"
+        url: "https://github.com/rajshah1909/Projects"
+
+stack:
+  categories:
+    - title: "AI / ML"
+      description: >-
+        PyTorch, Scikit-learn, XGBoost, LangChain, RAG pipelines, FinBERT, NLP, evaluation systems,
+        feature engineering, walk-forward validation.
+
+    - title: "Backend & Deployment"
+      description: >-
+        Python, Flask, FastAPI, Docker, GitHub Actions, REST APIs, SQL, AWS, CI/CD, batch inference,
+        API development.
+
+    - title: "Data Engineering"
+      description: >-
+        ETL/ELT, Pandas, NumPy, Parquet, data validation, batch processing, Tableau, Power BI,
+        data transformation.
+
+    - title: "Languages"
+      description: >-
+        Python, SQL, R, Java — with emphasis on Python for ML systems and SQL for analytics pipelines.
+
+education:
+  school: "Rutgers University, New Brunswick"
+  degree: "B.S. Computer Science & Data Science"
+  gpa: "3.79"
+  summary: >-
+    Honors: Computer Science Honors & Data Science Honors · Dean's List (2023–2026) · Phi Theta Kappa.
+    Coursework: Machine Learning, Intro to AI, Data Structures & Algorithms, Data Visualization.
