@@ -1,11 +1,18 @@
-import { BrainCircuit, Cloud, Database, Server } from "lucide-react";
+import {
+  BrainCircuit,
+  Cloud,
+  Code2,
+  Cpu,
+  Database,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import { SectionShell } from "./SectionShell";
 
 const icons: Record<string, ReactNode> = {
-  backend: <Server size={18} />,
-  "ai-llm": <BrainCircuit size={18} />,
+  ai: <BrainCircuit size={18} />,
+  ml: <Cpu size={18} />,
+  programming: <Code2 size={18} />,
   data: <Database size={18} />,
   cloud: <Cloud size={18} />,
 };
@@ -17,9 +24,9 @@ export function ServicesSection() {
     <SectionShell
       id="services"
       title="What I Build"
-      subtitle="Capabilities I ship in production — plus the tools I use to deliver them."
+      subtitle="AI · ML · Programming · Data · Cloud — structured around production systems I've shipped."
     >
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {capabilities.map((cap, idx) => (
           <div
             key={cap.id}
@@ -32,30 +39,19 @@ export function ServicesSection() {
               <div className="text-white/55">{icons[cap.id] ?? null}</div>
             </div>
 
-            <h3 className="mt-3 text-lg font-semibold">{cap.title}</h3>
+            <h3 className="mt-3 text-lg font-semibold tracking-tight">
+              {cap.title}
+            </h3>
 
-            <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-white/45">
-              Capabilities
+            <p className="mt-2 text-sm leading-relaxed text-white/65 break-normal">
+              {cap.focus}
             </p>
-            <ul className="mt-2 space-y-2 text-sm text-white/70">
-              {cap.items.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-2.5"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
 
-            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-white/45">
-              Stack
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2">
               {cap.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-white/70"
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-white/75"
                 >
                   {tool}
                 </span>

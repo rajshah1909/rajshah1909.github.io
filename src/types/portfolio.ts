@@ -25,7 +25,7 @@ export type Profile = {
 export type Capability = {
   id: string;
   title: string;
-  items: string[];
+  focus: string;
   tools: string[];
 };
 

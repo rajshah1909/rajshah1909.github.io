@@ -190,77 +190,86 @@
   "testimonials": [],
   "capabilities": [
     {
-      "id": "backend",
-      "title": "Backend",
-      "items": [
-        "FastAPI / Flask APIs",
-        "Batch pipelines",
-        "Validation layers",
-        "SQL analytics"
-      ],
+      "id": "ai",
+      "title": "AI",
+      "focus": "RAG assistants, LLM integration, NLP feature engineering, and policy-text analysis.",
       "tools": [
-        "Python",
-        "Flask",
-        "FastAPI",
-        "SQL",
-        "REST APIs"
+        "LangChain",
+        "RAG",
+        "DeepSeek API",
+        "NLP",
+        "FinBERT",
+        "TF-IDF",
+        "IBM watsonx",
+        "IBM Granite",
+        "Deterministic Validation"
       ]
     },
     {
-      "id": "ai-llm",
-      "title": "AI / LLM",
-      "items": [
-        "RAG architectures",
-        "Evaluation pipelines",
-        "Failure-mode analysis",
-        "Deterministic validation"
-      ],
+      "id": "ml",
+      "title": "ML",
+      "focus": "Supervised learning, deep learning, evaluation, and time-series forecasting.",
       "tools": [
         "PyTorch",
         "Scikit-learn",
         "XGBoost",
-        "NLP",
-        "FinBERT",
-        "LangChain",
-        "RAG Pipelines",
+        "Random Forest",
+        "CNN",
+        "Deep Learning",
         "Model Evaluation",
-        "Walk-Forward Validation"
+        "Hyperparameter Tuning",
+        "Walk-Forward Validation",
+        "FRED API",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "programming",
+      "title": "Programming",
+      "focus": "Backend APIs, system design, and full-stack application development.",
+      "tools": [
+        "Python",
+        "Java",
+        "SQL",
+        "R",
+        "FastAPI",
+        "Flask",
+        "REST APIs",
+        "SwiftUI",
+        "RBAC",
+        "System Design",
+        "Backend Development"
       ]
     },
     {
       "id": "data",
       "title": "Data",
-      "items": [
-        "ETL/ELT",
-        "Parquet datasets",
-        "Data quality checks",
-        "Stakeholder-ready outputs"
-      ],
+      "focus": "ETL pipelines, data quality, analytics, and stakeholder-ready reporting.",
       "tools": [
         "Pandas",
         "NumPy",
         "Parquet",
-        "ETL/ELT",
-        "Batch Processing",
+        "ETL",
+        "Selenium",
         "Data Validation",
-        "Tableau"
+        "MySQL",
+        "Tableau",
+        "Data Visualization",
+        "Linear Regression",
+        "Batch Processing"
       ]
     },
     {
       "id": "cloud",
       "title": "Cloud",
-      "items": [
-        "Dockerized deployment",
-        "CI/CD via GitHub Actions",
-        "Monitoring mindset",
-        "Reliable iteration loops"
-      ],
+      "focus": "Containerized deployment, CI/CD, and reliable production iteration.",
       "tools": [
         "Docker",
         "GitHub Actions",
         "AWS",
         "Render",
-        "CI/CD"
+        "CI/CD",
+        "IBM Cloud Object Storage"
       ]
     }
   ]
