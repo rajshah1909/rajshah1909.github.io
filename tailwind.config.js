@@ -4,21 +4,41 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Kanit", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["IBM Plex Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       colors: {
-        chromeFrom: "#646973",
-        chromeTo: "#BBCCD7",
+        ground: "#0E1114",
+        panel: "#171C21",
+        surface: "#151A1F",
+        surfaceHover: "#1B2128",
+        rule: "#262E36",
+        ink: "#E6EAED",
+        inkMuted: "#A8B2BA",
+        inkFaint: "#7C868E",
+        signal: "#FFB000",
+        signalSoft: "#FFB00022",
+        cool: "#6E97B8",
+        warn: "#D9604A",
       },
-      backgroundImage: {
-        chrome: "linear-gradient(180deg, #646973 0%, #BBCCD7 100%)",
-        accent: "linear-gradient(90deg, #a855f7 0%, #ec4899 45%, #f97316 100%)",
+      borderRadius: {
+        none: "0",
+        sm: "4px",
+        DEFAULT: "6px",
+        lg: "10px",
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(0,0,0,.55)",
+        card: "0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -12px rgba(0,0,0,0.5)",
+        glow: "0 0 0 1px rgba(255,176,0,0.16), 0 8px 32px -8px rgba(255,176,0,0.14)",
+      },
+      backgroundImage: {
+        "hero-glow":
+          "radial-gradient(ellipse 60% 50% at 20% 0%, rgba(255,176,0,0.08), transparent 70%)",
+      },
+      transitionTimingFunction: {
+        out: "cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },
   plugins: [],
 };
-

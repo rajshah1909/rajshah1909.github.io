@@ -6,17 +6,53 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Avoid mid-word wrapping */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #0e1114;
+}
+
 p,
 li {
   overflow-wrap: normal;
   word-break: normal;
 }
 
-.hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: #171c21;
+  color: #e6eaed;
+  border: 1px solid #2a323a;
+  padding: 0.5rem 1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.875rem;
+  transition: top 150ms ease-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid #ffb000;
+  outline-offset: 2px;
+}

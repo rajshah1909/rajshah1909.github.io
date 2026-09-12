@@ -2,26 +2,17 @@ import type { ReactNode } from "react";
 
 export function SectionShell(props: {
   id: string;
-  title: string;
-  eyebrow?: string;
+  label: string;
   children: ReactNode;
-  subtitle?: string;
 }) {
   return (
-    <section id={props.id} className="mx-auto max-w-6xl px-5 py-16 scroll-mt-20">
-      <div className="mb-10">
-        {props.eyebrow ? (
-          <div className="mb-3 text-xs font-semibold tracking-[0.18em] text-white/50">
-            {props.eyebrow}
-          </div>
-        ) : null}
-        <h2 className="text-2xl font-semibold tracking-tight">{props.title}</h2>
-        {props.subtitle ? (
-          <p className="mt-3 max-w-3xl text-white/65">{props.subtitle}</p>
-        ) : null}
+    <section id={props.id} className="scroll-mt-20 border-t border-rule">
+      <div className="mx-auto max-w-5xl px-6 py-16 md:grid md:grid-cols-[8rem_1fr] md:gap-8">
+        <div className="mb-8 font-mono text-sm text-inkFaint md:mb-0">
+          {props.label}
+        </div>
+        <div className="min-w-0">{props.children}</div>
       </div>
-      {props.children}
     </section>
   );
 }
-

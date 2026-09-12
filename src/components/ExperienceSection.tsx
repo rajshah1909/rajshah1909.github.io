@@ -1,60 +1,43 @@
-import { SectionShell } from "./SectionShell";
 import { usePortfolio } from "../hooks/usePortfolio";
-
-function Num(props: { n: number }) {
-  return (
-    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-semibold text-white/80">
-      {String(props.n).padStart(2, "0")}
-    </div>
-  );
-}
+import { SectionShell } from "./SectionShell";
+import { Metric } from "./Metric";
 
 export function ExperienceSection() {
   const { experience } = usePortfolio();
-
   return (
-    <SectionShell
-      id="experience"
-      title="Experience"
-      subtitle="Production ML, geospatial AI, and data systems with measurable impact."
-    >
-      <div className="space-y-6">
-        {experience.map((e, idx) => (
-          <div key={`${e.company}-${e.period}`} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-            <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-              <div className="flex items-start gap-4">
-                <Num n={idx + 1} />
-                <div>
-                  <h3 className="text-lg font-semibold tracking-tight">
-                    {e.role} — <span className="text-white/80">{e.company}</span>
-                  </h3>
-                  <div className="mt-2 flex flex-wrap gap-2 text-xs text-white/55">
-                    <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1">
-                      {e.period}
-                    </span>
-                    {e.location ? (
-                      <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1">
-                        {e.location}
-                      </span>
-                    ) : null}
-                  </div>
-                </div>
-              </div>
+    <SectionShell id="experience" label="Experience">
+      <div className="flex flex-col gap-6">
+        {experience.map((e) => (
+          <div
+            key={e.company}
+            className="rounded-lg border border-rule bg-surface p-6 transition-colors duration-300 ease-out hover:border-inkFaint/40 sm:p-8"
+          >
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 className="text-lg font-semibold text-ink">
+                {e.role} · {e.company}
+              </h3>
+              <span className="tabular font-mono text-sm text-inkFaint">
+                {e.period}
+                {e.current ? <span className="ml-2 text-signal">current</span> : null}
+              </span>
             </div>
-
-            <p className="mt-4 max-w-4xl text-white/70">{e.summary}</p>
-
-            <ul className="mt-4 grid gap-2 text-sm text-white/70 md:grid-cols-2">
-              {e.highlights.slice(0, 6).map((h) => (
-                <li key={h} className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3">
-                  {h}
-                </li>
-              ))}
-            </ul>
+            {e.priorRole ? (
+              <p className="mt-1 font-mono text-xs text-inkFaint">previously {e.priorRole}</p>
+            ) : null}
+            <p className="mt-4 max-w-[68ch] text-inkMuted">{e.summary}</p>
+            {e.metrics.length > 0 ? (
+              <div className="mt-6 flex flex-wrap gap-8">
+                {e.metrics.map((m) => (
+                  <Metric key={m.label} value={m.value} label={m.label} />
+                ))}
+              </div>
+            ) : null}
+            {e.stack.length > 0 ? (
+              <p className="mt-6 font-mono text-sm text-inkFaint">{e.stack.join(", ")}</p>
+            ) : null}
           </div>
         ))}
       </div>
     </SectionShell>
   );
 }
-
