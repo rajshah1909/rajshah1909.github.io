@@ -1,0 +1,501 @@
+{
+  "unit": "bps",
+  "note": "RMSE mean and standard deviation across walk-forward folds. Source: outputs/results/20260502_2304__model_results.csv",
+  "targets": [
+    {
+      "id": "yield_2y_chg1d",
+      "tenor": "2Y",
+      "horizon": "1d",
+      "label": "2Y \u00b7 1d",
+      "baselineBps": 10.98,
+      "bestModel": "Random Forest",
+      "bestBps": 8.65,
+      "improvementPct": 21.2,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Random Forest",
+          "rmseBps": 8.65,
+          "stdBps": 4.27,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 9.26,
+          "stdBps": 3.78,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 10.26,
+          "stdBps": 4.69,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 10.98,
+          "stdBps": 5.1,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 12.22,
+          "stdBps": 4.38,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 14.5,
+          "stdBps": 5.6,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "yield_2y_chg3d",
+      "tenor": "2Y",
+      "horizon": "3d",
+      "label": "2Y \u00b7 3d",
+      "baselineBps": 11.12,
+      "bestModel": "Random Forest",
+      "bestBps": 10.5,
+      "improvementPct": 5.6,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Random Forest",
+          "rmseBps": 10.5,
+          "stdBps": 4.58,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 10.77,
+          "stdBps": 5.04,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 11.12,
+          "stdBps": 3.91,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 11.54,
+          "stdBps": 4.27,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 13.53,
+          "stdBps": 6.8,
+          "nFeatures": 15,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 13.59,
+          "stdBps": 8.48,
+          "nFeatures": 19,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "yield_2y_chg5d",
+      "tenor": "2Y",
+      "horizon": "5d",
+      "label": "2Y \u00b7 5d",
+      "baselineBps": 12.74,
+      "bestModel": "Random Forest",
+      "bestBps": 11.9,
+      "improvementPct": 6.6,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Random Forest",
+          "rmseBps": 11.9,
+          "stdBps": 4.31,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 12.47,
+          "stdBps": 5.25,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 12.62,
+          "stdBps": 4.83,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 12.74,
+          "stdBps": 4.76,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 14.78,
+          "stdBps": 8.38,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 15.27,
+          "stdBps": 7.22,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "yield_10y_chg1d",
+      "tenor": "10Y",
+      "horizon": "1d",
+      "label": "10Y \u00b7 1d",
+      "baselineBps": 12.22,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 10.93,
+      "improvementPct": 10.6,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 10.93,
+          "stdBps": 3.39,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 11.07,
+          "stdBps": 3.31,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 12.22,
+          "stdBps": 4.69,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 12.72,
+          "stdBps": 3.49,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 14.5,
+          "stdBps": 6.69,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 17.31,
+          "stdBps": 10.08,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "yield_10y_chg3d",
+      "tenor": "10Y",
+      "horizon": "3d",
+      "label": "10Y \u00b7 3d",
+      "baselineBps": 13.36,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 13.25,
+      "improvementPct": 0.8,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 13.25,
+          "stdBps": 3.14,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 13.31,
+          "stdBps": 2.87,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 13.36,
+          "stdBps": 2.2,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 14.86,
+          "stdBps": 2.57,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 16.62,
+          "stdBps": 7.63,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 17.46,
+          "stdBps": 7.72,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "yield_10y_chg5d",
+      "tenor": "10Y",
+      "horizon": "5d",
+      "label": "10Y \u00b7 5d",
+      "baselineBps": 15.55,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 15.09,
+      "improvementPct": 3.0,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 15.09,
+          "stdBps": 2.97,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 15.1,
+          "stdBps": 2.97,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 15.55,
+          "stdBps": 2.71,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 17.07,
+          "stdBps": 3.02,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 18.94,
+          "stdBps": 5.01,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 19.37,
+          "stdBps": 5.29,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "spread_2s10s_chg1d",
+      "tenor": "2s10s",
+      "horizon": "1d",
+      "label": "2s10s \u00b7 1d",
+      "baselineBps": 8.14,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 7.96,
+      "improvementPct": 2.2,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 7.96,
+          "stdBps": 2.89,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 8.14,
+          "stdBps": 2.84,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 8.24,
+          "stdBps": 2.8,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 10.63,
+          "stdBps": 2.4,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 10.79,
+          "stdBps": 5.79,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 11.57,
+          "stdBps": 3.88,
+          "nFeatures": 15,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "spread_2s10s_chg3d",
+      "tenor": "2s10s",
+      "horizon": "3d",
+      "label": "2s10s \u00b7 3d",
+      "baselineBps": 9.71,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 9.42,
+      "improvementPct": 3.0,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 9.42,
+          "stdBps": 3.16,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 9.71,
+          "stdBps": 3.19,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 9.73,
+          "stdBps": 3.1,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 11.05,
+          "stdBps": 3.76,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 12.47,
+          "stdBps": 6.01,
+          "nFeatures": 15,
+          "isBaseline": false
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 13.97,
+          "stdBps": 7.71,
+          "nFeatures": 19,
+          "isBaseline": false
+        }
+      ]
+    },
+    {
+      "id": "spread_2s10s_chg5d",
+      "tenor": "2s10s",
+      "horizon": "5d",
+      "label": "2s10s \u00b7 5d",
+      "baselineBps": 10.94,
+      "bestModel": "Lasso (full NLP+macro)",
+      "bestBps": 10.78,
+      "improvementPct": 1.5,
+      "withinNoise": true,
+      "models": [
+        {
+          "model": "Lasso (full NLP+macro)",
+          "rmseBps": 10.78,
+          "stdBps": 4.13,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Random Forest",
+          "rmseBps": 10.84,
+          "stdBps": 4.07,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Baseline (macro only)",
+          "rmseBps": 10.94,
+          "stdBps": 3.62,
+          "nFeatures": 6,
+          "isBaseline": true
+        },
+        {
+          "model": "Ridge (full NLP+macro)",
+          "rmseBps": 14.12,
+          "stdBps": 4.46,
+          "nFeatures": 19,
+          "isBaseline": false
+        },
+        {
+          "model": "Linear (keyword NLP+macro)",
+          "rmseBps": 14.71,
+          "stdBps": 5.01,
+          "nFeatures": 15,
+          "isBaseline": false
+        },
+        {
+          "model": "XGBoost",
+          "rmseBps": 17.7,
+          "stdBps": 12.66,
+          "nFeatures": 19,
+          "isBaseline": false
+        }
+      ]
+    }
+  ]
+}
