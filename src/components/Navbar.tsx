@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-ground/90 backdrop-blur supports-[backdrop-filter]:bg-ground/75">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#home" className="font-mono text-sm text-ink" aria-label="Home">
+        <a href="#home" className="font-mono text-xl text-ink" aria-label="Home">
           Raj Shah
         </a>
         <nav className="hidden items-center gap-5 md:flex" aria-label="Primary">
