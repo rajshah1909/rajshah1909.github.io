@@ -2,11 +2,11 @@
   "profile": {
     "name": "Raj Shah",
     "shortName": "Raj",
-    "thesis": "Most ML engineers build models. I build the systems, data pipelines, and infrastructure that make AI reliable in the real world.",
-    "role": "AI & Cloud Engineer",
+    "thesis": "I build applications that connect software, data pipelines, AI, and cloud infrastructure into systems that actually ship.",
+    "role": "Application Developer",
     "standfirst": "Application Developer at Cogent People · Agentic AI & data systems on AWS",
     "location": "Piscataway, New Jersey, US",
-    "bio": "I work on the engineering around the model: retrieval, evaluation, governed data access, latency, and deployment. At Cogent People I build agentic AI and AWS data systems for InsightAI, an enterprise healthcare analytics platform that lets people query complex business data in natural language.\n\nBefore that I spent nine months at Boundary Remote Subsurface Solutions on a production geospatial AI framework, fusing seismic, well-log, gravity, magnetic, and hyperspectral data. Different domain, same lesson: the quality of the data, the retrieval, and the evaluation loop usually matters more than the choice of model.\n\nRutgers, Magna Cum Laude, double major in Computer Science and Data Science.",
+    "bio": "My background is Computer Science and Data Science together, and that combination shaped how I think about building software: an application is only as good as the data feeding it and the evaluation proving it works.\n\nAt Cogent People I build agentic AI and AWS data systems for InsightAI, an enterprise healthcare analytics platform — connecting reasoning agents, SQL generation, governed data access, and the API and infrastructure layer that makes those pieces reliable in production. Before that, at Boundary Remote Subsurface Solutions, I built ML pipelines for a geospatial AI framework fusing heterogeneous subsurface data, which taught the same lesson in a different domain: data quality and validation decide whether a model is trustworthy, not the model itself.\n\nThe projects on this site follow that same thread — a full-stack application, a production-style backend assistant, and a research pipeline built to be evaluated honestly rather than to look impressive.",
     "avatarImage": "/raj_headshot.JPG",
     "resumeUrl": "/Raj_Shah_Resume.pdf",
     "social": {
@@ -69,47 +69,71 @@
 
   "projects": [
     {
-      "id": "decoding-the-fed",
-      "title": "Decoding the Fed",
-      "subtitle": "Does FOMC language actually predict Treasury yields?",
+      "id": "fomc-yield-curve",
+      "title": "FOMC Yield Curve Prediction",
+      "subtitle": "Understanding how Federal Reserve language moves Treasury markets",
       "period": "Jan 2026 — May 2026",
       "featured": true,
       "interactive": "fomc-rmse",
       "problem": "Central-bank tone is widely assumed to move rates, and NLP-on-FOMC papers are everywhere. Almost none of them report what the sentiment features are worth against a plain macro baseline, which makes the claimed gains impossible to judge.",
-      "approach": "Built an NLP and ML pipeline over 30 years of FOMC statements — FinBERT sentiment and TF-IDF keyword features joined to macro data — then ran every model against a deliberate 6-feature macro-only baseline across 9 targets (2Y, 10Y, 2s10s spread × 1-, 3-, 5-day horizons) under walk-forward validation. 54 model × target cells, with per-fold RMSE variance retained rather than averaged away.",
-      "outcome": "The best configuration (Random Forest, 2Y 1-day) reached 8.7 bps RMSE against an 11.0 bps macro baseline — a 21% improvement. But across the other eight targets the gains ranged from 0.8% to 10.6%, and fold-to-fold standard deviation (±4.3 bps) ran roughly double the model differences. The honest reading is that FOMC sentiment adds little over macro features once you validate properly. Reporting that was the point.",
+      "idea": "Build an NLP and machine-learning pipeline over three decades of FOMC statements, then hold every model to a strict test: does it actually beat a deliberately simple macro-only baseline, once validated the way a time-series problem requires rather than the way that flatters the model?",
+      "architecture": [
+        "FOMC Statement",
+        "NLP Feature Extraction — TF-IDF + Hawkish/Dovish Scoring",
+        "FinBERT Sentiment",
+        "Macro + Treasury Data (FRED)",
+        "Ridge / Lasso / Random Forest / XGBoost",
+        "2Y / 10Y / 2s10s Predictions"
+      ],
+      "engineering": "The core engineering decision was the evaluation, not the modeling. Every model was scored against a deliberate 6-feature macro-only baseline across all 9 targets (2Y, 10Y, 2s10s spread × 1-, 3-, 5-day horizons), under walk-forward validation so no model ever saw a future meeting during training. Per-fold RMSE standard deviation was reported rather than averaged away — that's what exposed how much of the claimed gain sits inside the noise band rather than being a real effect.",
+      "outcome": "The best configuration (Random Forest, 2Y 1-day) reached 8.7 bps RMSE against an 11.0 bps macro baseline — a 21% improvement. Across the other eight targets, gains ranged from 0.8% to 10.6%, and fold-to-fold standard deviation (±4.3 bps) ran roughly double the model differences. The honest reading is that FOMC sentiment adds little over macro features once you validate properly. Reporting that was the point.",
       "metrics": [
         { "value": "8.7 vs 11.0", "label": "bps RMSE — best model vs macro baseline, 2Y 1-day" },
         { "value": "54", "label": "model × target cells, walk-forward validated" },
-        { "value": "30 yrs", "label": "of FOMC statements" }
+        { "value": "591", "label": "FOMC statements, 1994–2024" }
       ],
+      "primarySkills": ["NLP / FinBERT", "XGBoost / Predictive Modeling", "Financial Time-Series Analysis"],
       "stack": [
         "Python",
         "FinBERT",
+        "Transformers",
         "TF-IDF",
-        "Random Forest",
+        "Ridge",
         "Lasso",
+        "Random Forest",
         "XGBoost",
         "Scikit-learn",
-        "Pandas"
+        "Pandas",
+        "FRED API"
       ],
       "repoLink": "https://github.com/rajshah1909/ds-project"
     },
     {
       "id": "ru-path",
       "title": "RU-PATH",
-      "subtitle": "RAG assistant for Rutgers parking and transit",
+      "subtitle": "Backend assistant for Rutgers parking and transit",
       "period": "Sep 2025 — Dec 2025",
       "featured": true,
-      "problem": "Rutgers parking and transit rules are scattered across PDFs, department pages, and route tables. Students routinely get it wrong, and the authoritative answer depends on lot, permit type, time of day, and campus.",
-      "approach": "Built a retrieval-augmented assistant over the scattered source documents — FAISS vector search feeding a DeepSeek-backed generation step through LangChain, served by FastAPI. Query handling was structured by intent category rather than treated as one flat retrieval problem.",
-      "outcome": "Handles 350+ distinct query types at roughly 89% response accuracy, with 99% uptime in production use. The accuracy gains came from retrieval and intent routing, not from the generation model.",
-      "metrics": [
-        { "value": "~89%", "label": "response accuracy" },
-        { "value": "350+", "label": "distinct query types" },
-        { "value": "99%", "label": "production uptime" }
+      "problem": "Rutgers parking permits, campus zones, and bus routes are scattered across PDFs, department pages, and route tables — and the right answer depends on lot, permit type, time of day, and campus. Students and visitors routinely get it wrong.",
+      "idea": "Turn that scattered reference material into a conversational assistant: a Flask backend routes each question to the right engine — parking logic or bus routing — using intent detection and fuzzy matching against structured campus data, then hands the resolved context to DeepSeek for a natural-language answer.",
+      "architecture": [
+        "User Question",
+        "Flask REST API",
+        "Intent Detection + Fuzzy Matching",
+        "Parking Logic Engine / Routing Engine",
+        "Structured Campus Data — 5 permit types · 6 bus routes · 4 campuses",
+        "DeepSeek Chat Completion",
+        "Response"
       ],
-      "stack": ["Python", "LangChain", "FAISS", "DeepSeek API", "FastAPI", "RAG"],
+      "engineering": "The interesting part isn't the language model — it's the routing layer in front of it. Three separate engines (chatbot, parking logic, routing) split across roughly 1,588 lines of Python handle intent detection and resolve a query against structured permit, zone, and route data with fuzzy string matching before anything reaches DeepSeek. That keeps answers grounded in Rutgers' actual rules instead of the model improvising them, without needing a vector database or retrieval framework to do it.",
+      "outcome": "A working Flask API that resolves parking and transit questions across 4 Rutgers campuses, with the structure of the domain data — not a retrieval pipeline — doing the grounding work.",
+      "metrics": [
+        { "value": "3", "label": "routing engines — chatbot, parking logic, bus routing" },
+        { "value": "5 · 6 · 4", "label": "permit types · bus routes · campuses covered" },
+        { "value": "~1,588", "label": "lines of backend Python" }
+      ],
+      "primarySkills": ["Flask REST APIs", "LLM Integration (DeepSeek)", "Intent Routing & Data Modeling"],
+      "stack": ["Python", "Flask", "Flask-CORS", "OpenAI SDK (DeepSeek endpoint)", "difflib fuzzy matching", "REST APIs"],
       "repoLink": "https://github.com/rajshah1909/ru-path",
       "demoLink": "https://youtu.be/XkFiByMFBlc",
       "demoLabel": "Video walkthrough"
@@ -117,23 +141,44 @@
     {
       "id": "evac-ai",
       "title": "EvacAI",
-      "subtitle": "Disaster preparedness platform · IBM Z × UNSA Hackathon",
+      "subtitle": "AI-powered disaster preparedness platform · IBM Z × UNSA Hackathon",
       "period": "May 2026",
       "featured": true,
       "team": true,
-      "contribution": "REPLACE ME — one sentence naming exactly what you built. Which services, which parts of the backend, what you owned versus what teammates owned.",
-      "problem": "During floods, hurricanes, wildfires, and earthquakes, the information people need is split across weather services, alert feeds, and shelter directories — at exactly the moment they have least capacity to assemble it.",
-      "approach": "A FastAPI backend that joins geocoding, live weather, active disaster alerts, and shelter resources into a single location query, with ML-based risk scoring and IBM watsonx/Granite generating an evacuation plan from the assembled context.",
-      "outcome": "Working platform with global location support, deployed as a web app with an accompanying iOS client.",
+      "contribution": "Built the ML-based risk-scoring model and the backend API integrations — geocoding, live weather, and disaster-alert feeds — that fed the evacuation plan.",
+      "problem": "During floods, hurricanes, wildfires, and earthquakes, the information people need — weather, active alerts, nearby shelters — is split across separate services, at exactly the moment they have the least capacity to assemble it themselves.",
+      "idea": "A FastAPI backend that joins geocoding, live weather, disaster alerts, and shelter data into a single per-location query, scores the situation with a risk model, and hands the assembled context to IBM watsonx/Granite to generate a specific evacuation plan — surfaced through both a SwiftUI iOS app and a web client.",
+      "architecture": [
+        "User Location",
+        "Geocoding + Weather + NWS Alerts",
+        "FastAPI Backend",
+        "ML Risk Scoring",
+        "IBM watsonx / Granite",
+        "Evacuation Plan",
+        "SwiftUI iOS + Web Client"
+      ],
+      "engineering": "My part was the risk-scoring model and the integration layer underneath it — the services joining geocoding, weather, and alert feeds into one consistent per-location context before it reaches the risk model or the generation step. Getting that join right mattered more than the generation step: watsonx only produces a useful plan if the context underneath it is accurate.",
+      "outcome": "A working platform — deployed FastAPI backend plus a SwiftUI iOS client — that turns a single location into a risk score and a generated evacuation plan, built in a hackathon timeframe as a 4-person team.",
       "metrics": [
         { "value": "4", "label": "live data sources joined per query" },
-        { "value": "Global", "label": "location coverage" }
+        { "value": "US + Canada", "label": "weather & alert coverage" },
+        { "value": "2", "label": "clients — SwiftUI iOS + web" }
       ],
-      "stack": ["Python", "FastAPI", "SwiftUI", "IBM watsonx", "IBM Granite", "Cloud Object Storage"],
+      "primarySkills": ["SwiftUI / iOS Development", "FastAPI / Application Backend", "IBM watsonx & Granite"],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "SwiftUI",
+        "IBM watsonx",
+        "IBM Granite",
+        "IBM Cloud Object Storage",
+        "IBM IAM",
+        "Scikit-learn",
+        "Docker",
+        "Render"
+      ],
       "repoLink": "https://github.com/milipatel1309/EvacAI",
-      "repoOwnerNote": "Team repository — hosted under a teammate's account",
-      "demoLink": "https://evac-ai.onrender.com/",
-      "demoLabel": "Live demo"
+      "repoOwnerNote": "Team repository — hosted under a teammate's account"
     }
   ],
 
@@ -149,6 +194,29 @@
       "degree": "AS, Computer Science",
       "period": "Jan 2023 — Aug 2024",
       "details": "Phi Theta Kappa Honor Society"
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "Application Development",
+      "items": ["Python", "Java", "R", "REST APIs", "FastAPI", "Flask"]
+    },
+    {
+      "category": "AI & Machine Learning",
+      "items": ["Scikit-learn", "PyTorch", "XGBoost", "Transformers (FinBERT)", "LangChain", "RAG", "NLP", "IBM watsonx / Granite"]
+    },
+    {
+      "category": "Data Engineering",
+      "items": ["SQL", "Pandas", "NumPy", "ETL / ELT", "Parquet", "Amazon Redshift", "Tableau"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS (Bedrock, ECS Fargate, DynamoDB)", "IBM Cloud (COS, IAM)", "Docker", "GitHub Actions", "CI/CD"]
+    },
+    {
+      "category": "Frontend & Interfaces",
+      "items": ["SwiftUI", "React", "TypeScript", "HTML / CSS"]
     }
   ]
 }

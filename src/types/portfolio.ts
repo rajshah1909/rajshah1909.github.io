@@ -31,6 +31,12 @@ export type Profile = {
   resumeUrl?: string;
 };
 
+/** A grouped set of skills for the Skills section. Text lists, not logo badges. */
+export type SkillGroup = {
+  category: string;
+  items: string[];
+};
+
 /**
  * Credibility band entry. Deliberately narrow: one summary sentence, at most
  * two metrics. If you find yourself wanting `highlights: string[]` back, that
@@ -60,11 +66,22 @@ export type Project = {
   period?: string;
   /** Why this exists. What was broken or missing. */
   problem: string;
-  /** What you built, and the key technical decision. */
-  approach: string;
+  /** The solution, in one paragraph. Card teaser + case-study opener. */
+  idea: string;
+  /** Ordered flow steps rendered as the case-study architecture diagram. */
+  architecture: string[];
+  /** The technically interesting part — the decision or constraint that made this hard. */
+  engineering: string;
   /** What it produced. Honest — this layer must never be walked back by detail. */
   outcome: string;
   metrics: Metric[];
+  /**
+   * Exactly 3 labels shown as badges on the card — deliberately curated to show
+   * three *different* engineering capabilities, not the three most-impressive
+   * technologies. The full list lives in `stack`, shown only in the case study.
+   */
+  primarySkills: [string, string, string];
+  /** Full technology list — case study only, never rendered on the card. */
   stack: string[];
   repoLink?: string;
   /** Set when the repo is not under your own account. */
@@ -90,4 +107,5 @@ export type PortfolioData = {
   experience: Experience[];
   projects: Project[];
   education: Education[];
+  skills: SkillGroup[];
 };

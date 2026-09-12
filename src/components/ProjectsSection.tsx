@@ -1,23 +1,38 @@
-import { SectionShell } from "./SectionShell";
+import { useRef, useState } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
+import { SectionShell } from "./SectionShell";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectModal } from "./ProjectModal";
 
 export function ProjectsSection() {
   const { projects } = usePortfolio();
-  const sorted = [...projects].sort((a, b) => Number(Boolean(b.highlight)) - Number(Boolean(a.highlight)));
+  const [openId, setOpenId] = useState<string | null>(null);
+  const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const openProject = projects.find((p) => p.id === openId) ?? null;
 
   return (
-    <SectionShell
-      id="projects"
-      title="Projects"
-      subtitle="Production-minded systems: RAG, evaluation loops, pipelines, and deployment."
-    >
-      <div className="grid gap-6 lg:grid-cols-2">
-        {sorted.map((p, i) => (
-          <ProjectCard key={p.id} project={p} index={i + 1} />
+    <SectionShell id="projects" label="Projects">
+      <div className="flex flex-col gap-6">
+        {projects.map((p) => (
+          <ProjectCard
+            key={p.id}
+            project={p}
+            ref={(el) => {
+              triggerRefs.current[p.id] = el;
+            }}
+            onOpen={() => setOpenId(p.id)}
+          />
         ))}
       </div>
+
+      {openProject ? (
+        <ProjectModal
+          project={openProject}
+          onClose={() => setOpenId(null)}
+          returnFocusRef={{ current: triggerRefs.current[openProject.id] ?? null }}
+        />
+      ) : null}
     </SectionShell>
   );
 }
-

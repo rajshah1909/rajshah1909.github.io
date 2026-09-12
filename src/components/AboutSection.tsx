@@ -1,14 +1,13 @@
-import { SectionShell } from "./SectionShell";
 import { usePortfolio } from "../hooks/usePortfolio";
+import { SectionShell } from "./SectionShell";
 
 export function AboutSection() {
   const { profile } = usePortfolio();
   return (
-    <SectionShell id="about" title="About" subtitle="Who I am and what I build.">
-      <p className="max-w-3xl text-white/70 leading-relaxed whitespace-pre-line break-normal">
+    <SectionShell id="about" label="About">
+      <p className="max-w-[68ch] whitespace-pre-line text-inkMuted leading-relaxed">
         {profile.bio}
       </p>
     </SectionShell>
   );
 }
-

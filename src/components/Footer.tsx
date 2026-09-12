@@ -1,81 +1,37 @@
-import { Copy } from "lucide-react";
 import { usePortfolio } from "../hooks/usePortfolio";
-
-function CopyButton(props: { text: string }) {
-  return (
-    <button
-      type="button"
-      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/70 hover:text-white hover:border-white/20 transition-colors"
-      onClick={() => navigator.clipboard.writeText(props.text)}
-    >
-      <Copy size={16} />
-      Copy
-    </button>
-  );
-}
 
 export function Footer() {
   const { profile } = usePortfolio();
-  const s = profile.social;
+  const links: { label: string; href: string }[] = [];
+  if (profile.social.email) links.push({ label: "Email", href: `mailto:${profile.social.email}` });
+  if (profile.social.linkedin) links.push({ label: "LinkedIn", href: profile.social.linkedin });
+  if (profile.social.github) links.push({ label: "GitHub", href: profile.social.github });
 
   return (
-    <footer id="contact" className="border-t border-white/10 bg-black/20">
-      <div className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div>
-            <div className="text-xl font-semibold hero-heading">{profile.name}</div>
-            <div className="mt-3 text-white/65">{profile.specialization}</div>
-            {profile.location ? <div className="mt-2 text-white/45">{profile.location}</div> : null}
+    <footer id="contact" className="scroll-mt-20 border-t border-rule">
+      <div className="mx-auto max-w-5xl px-6 py-16 md:grid md:grid-cols-[8rem_1fr] md:gap-8">
+        <div className="mb-6 font-mono text-sm text-inkFaint md:mb-0">Contact</div>
+        <div className="min-w-0">
+          <h2 className="max-w-[32ch] text-2xl font-semibold text-ink">
+            Interested in building something useful?
+          </h2>
+          <p className="mt-3 max-w-[60ch] text-inkMuted">
+            I'm interested in opportunities across application development, software engineering,
+            AI/ML, data engineering, and cloud-based systems.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm">
+            {links.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-inkMuted underline underline-offset-4 hover:text-ink"
+              >
+                {l.label}
+              </a>
+            ))}
           </div>
-
-          <div>
-            <div className="text-xs font-semibold tracking-[0.18em] text-white/45 uppercase">
-              Navigate
-            </div>
-            <div className="mt-4 grid gap-2 text-sm text-white/65">
-              <a className="hover:text-white" href="#about">About</a>
-              <a className="hover:text-white" href="#experience">Experience</a>
-              <a className="hover:text-white" href="#projects">Projects</a>
-              <a className="hover:text-white" href="#services">What I Build</a>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold tracking-[0.18em] text-white/45 uppercase">
-              Reach out
-            </div>
-            <div className="mt-4 space-y-3 text-sm text-white/70">
-              {s.email ? (
-                <div className="flex flex-wrap items-center gap-3">
-                  <a className="hover:text-white" href={`mailto:${s.email}`}>{s.email}</a>
-                  <CopyButton text={s.email} />
-                </div>
-              ) : null}
-              {s.linkedin ? (
-                <a className="block hover:text-white" href={s.linkedin} target="_blank" rel="noopener">
-                  LinkedIn
-                </a>
-              ) : null}
-              {s.github ? (
-                <a className="block hover:text-white" href={s.github} target="_blank" rel="noopener">
-                  GitHub
-                </a>
-              ) : null}
-              {profile.resumeUrl ? (
-                <a className="block hover:text-white" href={profile.resumeUrl} target="_blank" rel="noopener">
-                  Resume (PDF)
-                </a>
-              ) : null}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} {profile.name}</div>
-          <div>Built with React · Vite · Tailwind</div>
         </div>
       </div>
     </footer>
   );
 }
-
