@@ -32,6 +32,29 @@ export function ExperienceSection() {
                 ))}
               </div>
             ) : null}
+            {e.contributions && e.contributions.length > 0 ? (
+              <dl className="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+                {e.contributions.map((c) => (
+                  <div key={c.area} className="border-t border-rule pt-4">
+                    <dt className="font-mono text-xs text-signal">{c.area}</dt>
+                    <dd className="mt-2 text-sm leading-relaxed text-inkMuted">{c.detail}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
+            {e.week && e.week.length > 0 ? (
+              <div className="mt-8">
+                <h4 className="font-mono text-xs text-inkFaint">A typical week</h4>
+                <ol className="mt-3 grid gap-4 sm:grid-cols-4">
+                  {e.week.map((w) => (
+                    <li key={w.label} className="border-l border-rule pl-4">
+                      <div className="font-mono text-sm text-ink">{w.label}</div>
+                      <p className="mt-1 text-xs leading-relaxed text-inkFaint">{w.detail}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
             {e.stack.length > 0 ? (
               <p className="mt-6 font-mono text-sm text-inkFaint">{e.stack.join(", ")}</p>
             ) : null}

@@ -6,7 +6,7 @@
     "role": "Application Developer",
     "standfirst": "Application Developer at Cogent People · Agentic AI & data systems on AWS",
     "location": "Piscataway, New Jersey, US",
-    "bio": "My background is Computer Science and Data Science together, and that combination shaped how I think about building software: an application is only as good as the data feeding it and the evaluation proving it works.\n\nAt Cogent People I build agentic AI and AWS data systems for InsightAI, an enterprise healthcare analytics platform — connecting reasoning agents, SQL generation, governed data access, and the API and infrastructure layer that makes those pieces reliable in production. Before that, at Boundary Remote Subsurface Solutions, I built ML pipelines for a geospatial AI framework fusing heterogeneous subsurface data, which taught the same lesson in a different domain: data quality and validation decide whether a model is trustworthy, not the model itself.\n\nThe projects on this site follow that same thread — a full-stack application, a production-style backend assistant, and a research pipeline built to be evaluated honestly rather than to look impressive.",
+    "bio": "My background is Computer Science and Data Science together, and that combination shaped how I think about building software: an application is only as good as the data feeding it and the evaluation proving it works.\n\nAt Cogent People I build AI agents and workflow automation for an enterprise analytics team: multi-step manual reports turned into scripted pipelines, and a multi-agent assistant that answers questions against a governed data warehouse. Most of the job is the unglamorous part — routing, validation, access control, and checking answers against the data instead of trusting the model. Before that, at Boundary Remote Subsurface Solutions, I built ML pipelines for a geospatial AI framework fusing heterogeneous subsurface data, which taught the same lesson in a different domain: data quality and validation decide whether a model is trustworthy, not the model itself.\n\nThe projects on this site follow that same thread — a full-stack application, a production-style backend assistant, and a research pipeline built to be evaluated honestly rather than to look impressive.",
     "avatarImage": "/raj_headshot.JPG",
     "resumeUrl": "/Raj_Shah_Resume.pdf",
     "social": {
@@ -16,7 +16,6 @@
       "website": "https://rajshah1909.github.io"
     }
   },
-
   "experience": [
     {
       "company": "Cogent People",
@@ -25,21 +24,74 @@
       "period": "Jun 2026 —",
       "location": "Maryland, US",
       "current": true,
-      "summary": "Agentic AI workflows and governed AI-to-data access for InsightAI, an enterprise healthcare analytics platform — supervisor and specialist agents handling reasoning, SQL generation, and validation.",
+      "summary": "Build AI agents and workflow automation for an enterprise analytics team — replacing manual, multi-step reporting with scripted pipelines and putting a governed natural-language interface on top of a data warehouse.",
       "metrics": [
-        { "value": "19.7s → 10.5s", "label": "avg response time" },
-        { "value": "~99%", "label": "analytical accuracy, validated scenarios" }
+        {
+          "value": "19.7s → 10.5s",
+          "label": "avg agent response time"
+        },
+        {
+          "value": "TODO hrs → TODO min",
+          "label": "monthly report cycle, per run"
+        },
+        {
+          "value": "TODO",
+          "label": "manual reports converted to scripted pipelines"
+        },
+        {
+          "value": "TODO",
+          "label": "meeting transcripts distilled into the team knowledge base"
+        }
       ],
       "stack": [
+        "Python",
         "Amazon Bedrock",
         "AgentCore",
         "Strands Agents",
         "MCP",
         "Amazon Redshift",
+        "SQL",
+        "Power Automate",
+        "Office Scripts",
+        "Excel",
         "FastAPI",
-        "Python",
-        "DynamoDB",
-        "ECS Fargate"
+        "GitHub"
+      ],
+      "contributions": [
+        {
+          "area": "Report automation",
+          "detail": "Turned a monthly manual reporting process — file unpacking, format conversion, tab-to-tab copying, pivots, calculated fields — into a scripted end-to-end pipeline that routes inputs by file name and runs each report in sequence. Next step: trigger it automatically when source files arrive."
+        },
+        {
+          "area": "Agentic AI",
+          "detail": "Lead architecture and planning for a multi-agent analytics assistant: a supervisor that sequences work, an agent registry, a routing layer, and specialist agents for knowledge-base answers and SQL generation. Running a benchmark that compares routing approaches on accuracy, latency, and cost before committing to one."
+        },
+        {
+          "area": "Reliability & security",
+          "detail": "Triage stakeholder-reported defects (wrong answers, contradictions, misrouted suggestions) back to root cause in the schema or prompt layer, and flag access-control issues — least-privilege database roles, over-broad group grants — before release."
+        },
+        {
+          "area": "Knowledge capture",
+          "detail": "Convert recorded working sessions into structured knowledge-base entries in a version-controlled repo, so process knowledge stops living in one analyst's head."
+        }
+      ],
+      "week": [
+        {
+          "label": "Build",
+          "detail": "Agent and automation development; scripted pipelines tested locally before they move to scheduled or event-triggered runs."
+        },
+        {
+          "label": "Debug",
+          "detail": "Defects traced to a cause and a fix, verified against the warehouse rather than the model's own output."
+        },
+        {
+          "label": "Operate",
+          "detail": "Recurring data loads and production uploads, run against a written checklist with a prod-clear check first."
+        },
+        {
+          "label": "Document",
+          "detail": "Knowledge-base updates and a weekly written log of what shipped, what broke, and what's next."
+        }
       ]
     },
     {
@@ -50,10 +102,23 @@
       "current": false,
       "summary": "ML pipelines for a production geospatial AI framework ingesting 13+ heterogeneous subsurface dataset types, with structured QC, schema validation, and depth-gap classification.",
       "metrics": [
-        { "value": "0.65 → 0.78", "label": "model R²" },
-        { "value": "20% → <5%", "label": "preprocessing error rate" }
+        {
+          "value": "0.65 → 0.78",
+          "label": "model R²"
+        },
+        {
+          "value": "20% → <5%",
+          "label": "preprocessing error rate"
+        }
       ],
-      "stack": ["Python", "Pandas", "NumPy", "Scikit-learn", "Parquet", "ETL"]
+      "stack": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Parquet",
+        "ETL"
+      ]
     },
     {
       "company": "The Marcus Harris Foundation",
@@ -62,11 +127,20 @@
       "location": "Remote",
       "current": false,
       "summary": "Cleaned and validated donor records, then built the SQL and Tableau reporting layer leadership used for outreach decisions.",
-      "metrics": [{ "value": "1,500+", "label": "records validated" }],
-      "stack": ["SQL", "Python", "Pandas", "Tableau"]
+      "metrics": [
+        {
+          "value": "1,500+",
+          "label": "records validated"
+        }
+      ],
+      "stack": [
+        "SQL",
+        "Python",
+        "Pandas",
+        "Tableau"
+      ]
     }
   ],
-
   "projects": [
     {
       "id": "fomc-yield-curve",
@@ -88,11 +162,24 @@
       "engineering": "The core engineering decision was the evaluation, not the modeling. Every model was scored against a deliberate 6-feature macro-only baseline across all 9 targets (2Y, 10Y, 2s10s spread × 1-, 3-, 5-day horizons), under walk-forward validation so no model ever saw a future meeting during training. Per-fold RMSE standard deviation was reported rather than averaged away — that's what exposed how much of the claimed gain sits inside the noise band rather than being a real effect.",
       "outcome": "The best configuration (Random Forest, 2Y 1-day) reached 8.7 bps RMSE against an 11.0 bps macro baseline — a 21% improvement. Across the other eight targets, gains ranged from 0.8% to 10.6%, and fold-to-fold standard deviation (±4.3 bps) ran roughly double the model differences. The honest reading is that FOMC sentiment adds little over macro features once you validate properly. Reporting that was the point.",
       "metrics": [
-        { "value": "8.7 vs 11.0", "label": "bps RMSE — best model vs macro baseline, 2Y 1-day" },
-        { "value": "54", "label": "model × target cells, walk-forward validated" },
-        { "value": "591", "label": "FOMC statements, 1994–2024" }
+        {
+          "value": "8.7 vs 11.0",
+          "label": "bps RMSE — best model vs macro baseline, 2Y 1-day"
+        },
+        {
+          "value": "54",
+          "label": "model × target cells, walk-forward validated"
+        },
+        {
+          "value": "591",
+          "label": "FOMC statements, 1994–2024"
+        }
       ],
-      "primarySkills": ["NLP / FinBERT", "XGBoost / Predictive Modeling", "Financial Time-Series Analysis"],
+      "primarySkills": [
+        "NLP / FinBERT",
+        "XGBoost / Predictive Modeling",
+        "Financial Time-Series Analysis"
+      ],
       "stack": [
         "Python",
         "FinBERT",
@@ -128,12 +215,32 @@
       "engineering": "The interesting part isn't the language model — it's the routing layer in front of it. Three separate engines (chatbot, parking logic, routing) split across roughly 1,588 lines of Python handle intent detection and resolve a query against structured permit, zone, and route data with fuzzy string matching before anything reaches DeepSeek. That keeps answers grounded in Rutgers' actual rules instead of the model improvising them, without needing a vector database or retrieval framework to do it.",
       "outcome": "A working Flask API that resolves parking and transit questions across 4 Rutgers campuses, with the structure of the domain data — not a retrieval pipeline — doing the grounding work.",
       "metrics": [
-        { "value": "3", "label": "routing engines — chatbot, parking logic, bus routing" },
-        { "value": "5 · 6 · 4", "label": "permit types · bus routes · campuses covered" },
-        { "value": "~1,588", "label": "lines of backend Python" }
+        {
+          "value": "3",
+          "label": "routing engines — chatbot, parking logic, bus routing"
+        },
+        {
+          "value": "5 · 6 · 4",
+          "label": "permit types · bus routes · campuses covered"
+        },
+        {
+          "value": "~1,588",
+          "label": "lines of backend Python"
+        }
       ],
-      "primarySkills": ["Flask REST APIs", "LLM Integration (DeepSeek)", "Intent Routing & Data Modeling"],
-      "stack": ["Python", "Flask", "Flask-CORS", "OpenAI SDK (DeepSeek endpoint)", "difflib fuzzy matching", "REST APIs"],
+      "primarySkills": [
+        "Flask REST APIs",
+        "LLM Integration (DeepSeek)",
+        "Intent Routing & Data Modeling"
+      ],
+      "stack": [
+        "Python",
+        "Flask",
+        "Flask-CORS",
+        "OpenAI SDK (DeepSeek endpoint)",
+        "difflib fuzzy matching",
+        "REST APIs"
+      ],
       "repoLink": "https://github.com/rajshah1909/ru-path",
       "demoLink": "https://youtu.be/XkFiByMFBlc",
       "demoLabel": "Video walkthrough"
@@ -160,11 +267,24 @@
       "engineering": "My part was the risk-scoring model and the integration layer underneath it — the services joining geocoding, weather, and alert feeds into one consistent per-location context before it reaches the risk model or the generation step. Getting that join right mattered more than the generation step: watsonx only produces a useful plan if the context underneath it is accurate.",
       "outcome": "A working platform — deployed FastAPI backend plus a SwiftUI iOS client — that turns a single location into a risk score and a generated evacuation plan, built in a hackathon timeframe as a 4-person team.",
       "metrics": [
-        { "value": "4", "label": "live data sources joined per query" },
-        { "value": "US + Canada", "label": "weather & alert coverage" },
-        { "value": "2", "label": "clients — SwiftUI iOS + web" }
+        {
+          "value": "4",
+          "label": "live data sources joined per query"
+        },
+        {
+          "value": "US + Canada",
+          "label": "weather & alert coverage"
+        },
+        {
+          "value": "2",
+          "label": "clients — SwiftUI iOS + web"
+        }
       ],
-      "primarySkills": ["SwiftUI / iOS Development", "FastAPI / Application Backend", "IBM watsonx & Granite"],
+      "primarySkills": [
+        "SwiftUI / iOS Development",
+        "FastAPI / Application Backend",
+        "IBM watsonx & Granite"
+      ],
       "stack": [
         "Python",
         "FastAPI",
@@ -183,7 +303,6 @@
       "demoLabel": "Video walkthrough"
     }
   ],
-
   "education": [
     {
       "school": "Rutgers University–New Brunswick",
@@ -198,27 +317,61 @@
       "details": "Phi Theta Kappa Honor Society"
     }
   ],
-
   "skills": [
     {
       "category": "Application Development",
-      "items": ["Python", "Java", "R", "REST APIs", "FastAPI", "Flask"]
+      "items": [
+        "Python",
+        "Java",
+        "R",
+        "REST APIs",
+        "FastAPI",
+        "Flask"
+      ]
     },
     {
       "category": "AI & Machine Learning",
-      "items": ["Scikit-learn", "PyTorch", "XGBoost", "Transformers (FinBERT)", "LangChain", "RAG", "NLP", "IBM watsonx / Granite"]
+      "items": [
+        "Scikit-learn",
+        "PyTorch",
+        "XGBoost",
+        "Transformers (FinBERT)",
+        "LangChain",
+        "RAG",
+        "NLP",
+        "IBM watsonx / Granite"
+      ]
     },
     {
       "category": "Data Engineering",
-      "items": ["SQL", "Pandas", "NumPy", "ETL / ELT", "Parquet", "Amazon Redshift", "Tableau"]
+      "items": [
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "ETL / ELT",
+        "Parquet",
+        "Amazon Redshift",
+        "Tableau"
+      ]
     },
     {
       "category": "Cloud & DevOps",
-      "items": ["AWS (Bedrock, ECS Fargate, DynamoDB)", "IBM Cloud (COS, IAM)", "Docker", "GitHub Actions", "CI/CD"]
+      "items": [
+        "AWS (Bedrock, ECS Fargate, DynamoDB)",
+        "IBM Cloud (COS, IAM)",
+        "Docker",
+        "GitHub Actions",
+        "CI/CD"
+      ]
     },
     {
       "category": "Frontend & Interfaces",
-      "items": ["SwiftUI", "React", "TypeScript", "HTML / CSS"]
+      "items": [
+        "SwiftUI",
+        "React",
+        "TypeScript",
+        "HTML / CSS"
+      ]
     }
   ]
 }
