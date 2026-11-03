@@ -2,7 +2,7 @@
   "profile": {
     "name": "Raj Shah",
     "shortName": "Raj",
-    "thesis": "I build applications that connect software, data pipelines, AI, and cloud infrastructure into systems that actually ship.",
+    "thesis": "I build AI agents and automation that run on real enterprise data — and the validation that keeps them correct.",
     "role": "Application Developer",
     "standfirst": "Application Developer at Cogent People · Agentic AI & data systems on AWS",
     "location": "Piscataway, New Jersey, US",
@@ -143,109 +143,6 @@
   ],
   "projects": [
     {
-      "id": "fomc-yield-curve",
-      "title": "FOMC Yield Curve Prediction",
-      "subtitle": "Understanding how Federal Reserve language moves Treasury markets",
-      "period": "Jan 2026 — May 2026",
-      "featured": true,
-      "interactive": "fomc-rmse",
-      "problem": "Central-bank tone is widely assumed to move rates, and NLP-on-FOMC papers are everywhere. Almost none of them report what the sentiment features are worth against a plain macro baseline, which makes the claimed gains impossible to judge.",
-      "idea": "Build an NLP and machine-learning pipeline over three decades of FOMC statements, then hold every model to a strict test: does it actually beat a deliberately simple macro-only baseline, once validated the way a time-series problem requires rather than the way that flatters the model?",
-      "architecture": [
-        "FOMC Statement",
-        "NLP Feature Extraction — TF-IDF + Hawkish/Dovish Scoring",
-        "FinBERT Sentiment",
-        "Macro + Treasury Data (FRED)",
-        "Ridge / Lasso / Random Forest / XGBoost",
-        "2Y / 10Y / 2s10s Predictions"
-      ],
-      "engineering": "The core engineering decision was the evaluation, not the modeling. Every model was scored against a deliberate 6-feature macro-only baseline across all 9 targets (2Y, 10Y, 2s10s spread × 1-, 3-, 5-day horizons), under walk-forward validation so no model ever saw a future meeting during training. Per-fold RMSE standard deviation was reported rather than averaged away — that's what exposed how much of the claimed gain sits inside the noise band rather than being a real effect.",
-      "outcome": "The best configuration (Random Forest, 2Y 1-day) reached 8.7 bps RMSE against an 11.0 bps macro baseline — a 21% improvement. Across the other eight targets, gains ranged from 0.8% to 10.6%, and fold-to-fold standard deviation (±4.3 bps) ran roughly double the model differences. The honest reading is that FOMC sentiment adds little over macro features once you validate properly. Reporting that was the point.",
-      "metrics": [
-        {
-          "value": "8.7 vs 11.0",
-          "label": "bps RMSE — best model vs macro baseline, 2Y 1-day"
-        },
-        {
-          "value": "54",
-          "label": "model × target cells, walk-forward validated"
-        },
-        {
-          "value": "591",
-          "label": "FOMC statements, 1994–2024"
-        }
-      ],
-      "primarySkills": [
-        "NLP / FinBERT",
-        "XGBoost / Predictive Modeling",
-        "Financial Time-Series Analysis"
-      ],
-      "stack": [
-        "Python",
-        "FinBERT",
-        "Transformers",
-        "TF-IDF",
-        "Ridge",
-        "Lasso",
-        "Random Forest",
-        "XGBoost",
-        "Scikit-learn",
-        "Pandas",
-        "FRED API"
-      ],
-      "repoLink": "https://github.com/rajshah1909/ds-project"
-    },
-    {
-      "id": "ru-path",
-      "title": "RU-PATH",
-      "subtitle": "Backend assistant for Rutgers parking and transit",
-      "period": "Sep 2025 — Dec 2025",
-      "featured": true,
-      "problem": "Rutgers parking permits, campus zones, and bus routes are scattered across PDFs, department pages, and route tables — and the right answer depends on lot, permit type, time of day, and campus. Students and visitors routinely get it wrong.",
-      "idea": "Turn that scattered reference material into a conversational assistant: a Flask backend routes each question to the right engine — parking logic or bus routing — using intent detection and fuzzy matching against structured campus data, then hands the resolved context to DeepSeek for a natural-language answer.",
-      "architecture": [
-        "User Question",
-        "Flask REST API",
-        "Intent Detection + Fuzzy Matching",
-        "Parking Logic Engine / Routing Engine",
-        "Structured Campus Data — 5 permit types · 6 bus routes · 4 campuses",
-        "DeepSeek Chat Completion",
-        "Response"
-      ],
-      "engineering": "The interesting part isn't the language model — it's the routing layer in front of it. Three separate engines (chatbot, parking logic, routing) split across roughly 1,588 lines of Python handle intent detection and resolve a query against structured permit, zone, and route data with fuzzy string matching before anything reaches DeepSeek. That keeps answers grounded in Rutgers' actual rules instead of the model improvising them, without needing a vector database or retrieval framework to do it.",
-      "outcome": "A working Flask API that resolves parking and transit questions across 4 Rutgers campuses, with the structure of the domain data — not a retrieval pipeline — doing the grounding work.",
-      "metrics": [
-        {
-          "value": "3",
-          "label": "routing engines — chatbot, parking logic, bus routing"
-        },
-        {
-          "value": "5 · 6 · 4",
-          "label": "permit types · bus routes · campuses covered"
-        },
-        {
-          "value": "~1,588",
-          "label": "lines of backend Python"
-        }
-      ],
-      "primarySkills": [
-        "Flask REST APIs",
-        "LLM Integration (DeepSeek)",
-        "Intent Routing & Data Modeling"
-      ],
-      "stack": [
-        "Python",
-        "Flask",
-        "Flask-CORS",
-        "OpenAI SDK (DeepSeek endpoint)",
-        "difflib fuzzy matching",
-        "REST APIs"
-      ],
-      "repoLink": "https://github.com/rajshah1909/ru-path",
-      "demoLink": "https://youtu.be/XkFiByMFBlc",
-      "demoLabel": "Video walkthrough"
-    },
-    {
       "id": "evac-ai",
       "title": "EvacAI",
       "subtitle": "AI-powered disaster preparedness platform · IBM Z × UNSA Hackathon",
@@ -301,6 +198,109 @@
       "repoOwnerNote": "Team repository — hosted under a teammate's account",
       "demoLink": "https://youtu.be/hqztXd3r4ic",
       "demoLabel": "Video walkthrough"
+    },
+    {
+      "id": "ru-path",
+      "title": "RU-PATH",
+      "subtitle": "Backend assistant for Rutgers parking and transit",
+      "period": "Sep 2025 — Dec 2025",
+      "featured": true,
+      "problem": "Rutgers parking permits, campus zones, and bus routes are scattered across PDFs, department pages, and route tables — and the right answer depends on lot, permit type, time of day, and campus. Students and visitors routinely get it wrong.",
+      "idea": "Turn that scattered reference material into a conversational assistant: a Flask backend routes each question to the right engine — parking logic or bus routing — using intent detection and fuzzy matching against structured campus data, then hands the resolved context to DeepSeek for a natural-language answer.",
+      "architecture": [
+        "User Question",
+        "Flask REST API",
+        "Intent Detection + Fuzzy Matching",
+        "Parking Logic Engine / Routing Engine",
+        "Structured Campus Data — 5 permit types · 6 bus routes · 4 campuses",
+        "DeepSeek Chat Completion",
+        "Response"
+      ],
+      "engineering": "The interesting part isn't the language model — it's the routing layer in front of it. Three separate engines (chatbot, parking logic, routing) split across roughly 1,588 lines of Python handle intent detection and resolve a query against structured permit, zone, and route data with fuzzy string matching before anything reaches DeepSeek. That keeps answers grounded in Rutgers' actual rules instead of the model improvising them, without needing a vector database or retrieval framework to do it.",
+      "outcome": "A working Flask API that resolves parking and transit questions across 4 Rutgers campuses, with the structure of the domain data — not a retrieval pipeline — doing the grounding work.",
+      "metrics": [
+        {
+          "value": "3",
+          "label": "routing engines — chatbot, parking logic, bus routing"
+        },
+        {
+          "value": "5 · 6 · 4",
+          "label": "permit types · bus routes · campuses covered"
+        },
+        {
+          "value": "~1,588",
+          "label": "lines of backend Python"
+        }
+      ],
+      "primarySkills": [
+        "Flask REST APIs",
+        "LLM Integration (DeepSeek)",
+        "Intent Routing & Data Modeling"
+      ],
+      "stack": [
+        "Python",
+        "Flask",
+        "Flask-CORS",
+        "OpenAI SDK (DeepSeek endpoint)",
+        "difflib fuzzy matching",
+        "REST APIs"
+      ],
+      "repoLink": "https://github.com/rajshah1909/ru-path",
+      "demoLink": "https://youtu.be/XkFiByMFBlc",
+      "demoLabel": "Video walkthrough"
+    },
+    {
+      "id": "fomc-yield-curve",
+      "title": "FOMC Yield Curve Prediction",
+      "subtitle": "Understanding how Federal Reserve language moves Treasury markets",
+      "period": "Jan 2026 — May 2026",
+      "featured": true,
+      "interactive": "fomc-rmse",
+      "problem": "Central-bank tone is widely assumed to move rates, and NLP-on-FOMC papers are everywhere. Almost none of them report what the sentiment features are worth against a plain macro baseline, which makes the claimed gains impossible to judge.",
+      "idea": "Build an NLP and machine-learning pipeline over three decades of FOMC statements, then hold every model to a strict test: does it actually beat a deliberately simple macro-only baseline, once validated the way a time-series problem requires rather than the way that flatters the model?",
+      "architecture": [
+        "FOMC Statement",
+        "NLP Feature Extraction — TF-IDF + Hawkish/Dovish Scoring",
+        "FinBERT Sentiment",
+        "Macro + Treasury Data (FRED)",
+        "Ridge / Lasso / Random Forest / XGBoost",
+        "2Y / 10Y / 2s10s Predictions"
+      ],
+      "engineering": "The core engineering decision was the evaluation, not the modeling. Every model was scored against a deliberate 6-feature macro-only baseline across all 9 targets (2Y, 10Y, 2s10s spread × 1-, 3-, 5-day horizons), under walk-forward validation so no model ever saw a future meeting during training. Per-fold RMSE standard deviation was reported rather than averaged away — that's what exposed how much of the claimed gain sits inside the noise band rather than being a real effect.",
+      "outcome": "The best configuration (Random Forest, 2Y 1-day) reached 8.7 bps RMSE against an 11.0 bps macro baseline — a 21% improvement. Across the other eight targets, gains ranged from 0.8% to 10.6%, and fold-to-fold standard deviation (±4.3 bps) ran roughly double the model differences. The honest reading is that FOMC sentiment adds little over macro features once you validate properly. Reporting that was the point.",
+      "metrics": [
+        {
+          "value": "8.7 vs 11.0",
+          "label": "bps RMSE — best model vs macro baseline, 2Y 1-day"
+        },
+        {
+          "value": "54",
+          "label": "model × target cells, walk-forward validated"
+        },
+        {
+          "value": "591",
+          "label": "FOMC statements, 1994–2024"
+        }
+      ],
+      "primarySkills": [
+        "NLP / FinBERT",
+        "XGBoost / Predictive Modeling",
+        "Financial Time-Series Analysis"
+      ],
+      "stack": [
+        "Python",
+        "FinBERT",
+        "Transformers",
+        "TF-IDF",
+        "Ridge",
+        "Lasso",
+        "Random Forest",
+        "XGBoost",
+        "Scikit-learn",
+        "Pandas",
+        "FRED API"
+      ],
+      "repoLink": "https://github.com/rajshah1909/ds-project"
     }
   ],
   "education": [

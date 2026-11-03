@@ -6,11 +6,11 @@ export function ExperienceSection() {
   const { experience } = usePortfolio();
   return (
     <SectionShell id="experience" label="Experience">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col">
         {experience.map((e) => (
           <div
             key={e.company}
-            className="rounded-lg border border-rule bg-surface p-6 transition-colors duration-300 ease-out hover:border-inkFaint/40 sm:p-8"
+            className="border-t border-rule py-8 first:border-t-0 first:pt-0"
           >
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <h3 className="text-lg font-semibold text-ink">

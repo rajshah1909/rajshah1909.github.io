@@ -1,5 +1,4 @@
 import { AboutSection } from "./components/AboutSection";
-import { EducationSection } from "./components/EducationSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
@@ -16,12 +15,7 @@ export default function App() {
       </a>
       <Navbar />
       <main>
-        <Reveal>
-          <HeroSection />
-        </Reveal>
-        <Reveal>
-          <AboutSection />
-        </Reveal>
+        <HeroSection />
         <Reveal>
           <ExperienceSection />
         </Reveal>
@@ -32,12 +26,10 @@ export default function App() {
           <SkillsSection />
         </Reveal>
         <Reveal>
-          <EducationSection />
+          <AboutSection />
         </Reveal>
       </main>
-      <Reveal>
-        <Footer />
-      </Reveal>
+      <Footer />
     </div>
   );
 }
