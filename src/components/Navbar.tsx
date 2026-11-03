@@ -54,14 +54,14 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          {profile.resumeUrl ? (
+          {profile.social.linkedin ? (
             <a
-              href={profile.resumeUrl}
+              href={profile.social.linkedin}
               target="_blank"
               rel="noreferrer"
               className="border border-rule px-3 py-1 font-mono text-sm text-ink transition-colors hover:border-signal hover:text-signal"
             >
-              Resume
+              LinkedIn
             </a>
           ) : null}
         </nav>

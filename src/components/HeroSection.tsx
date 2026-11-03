@@ -28,22 +28,22 @@ export function HeroSection() {
               >
                 View work
               </a>
-              {profile.resumeUrl ? (
-                <a
-                  href={profile.resumeUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border border-rule px-4 py-2 text-ink transition-colors hover:border-inkMuted"
-                >
-                  Resume (PDF)
-                </a>
-              ) : null}
               {profile.social.email ? (
                 <a
                   href={`mailto:${profile.social.email}`}
+                  className="border border-rule px-4 py-2 text-ink transition-colors hover:border-inkMuted"
+                >
+                  Email me
+                </a>
+              ) : null}
+              {profile.social.linkedin ? (
+                <a
+                  href={profile.social.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
                   className="px-2 py-2 text-inkMuted underline underline-offset-4 hover:text-ink"
                 >
-                  Email
+                  LinkedIn
                 </a>
               ) : null}
             </div>

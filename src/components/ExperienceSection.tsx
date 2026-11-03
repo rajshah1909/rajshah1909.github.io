@@ -1,6 +1,7 @@
 import { usePortfolio } from "../hooks/usePortfolio";
 import { SectionShell } from "./SectionShell";
 import { Metric } from "./Metric";
+import { ImpactPanel } from "./ImpactPanel";
 
 export function ExperienceSection() {
   const { experience } = usePortfolio();
@@ -25,7 +26,9 @@ export function ExperienceSection() {
               <p className="mt-1 font-mono text-xs text-inkFaint">previously {e.priorRole}</p>
             ) : null}
             <p className="mt-4 max-w-[68ch] text-inkMuted">{e.summary}</p>
-            {e.metrics.length > 0 ? (
+            {e.metrics.some((m) => m.bar) ? (
+              <ImpactPanel metrics={e.metrics} />
+            ) : e.metrics.length > 0 ? (
               <div className="mt-6 flex flex-wrap gap-8">
                 {e.metrics.map((m) => (
                   <Metric key={m.label} value={m.value} label={m.label} />

@@ -5,10 +5,9 @@
     "thesis": "I build AI agents and automation that run on real enterprise data — and the validation that keeps them correct.",
     "role": "Application Developer",
     "standfirst": "Application Developer at Cogent People · Agentic AI & data systems on AWS",
-    "location": "Piscataway, New Jersey, US",
+    "location": "Maryland · DC area",
     "bio": "My background is Computer Science and Data Science together, and that combination shaped how I think about building software: an application is only as good as the data feeding it and the evaluation proving it works.\n\nAt Cogent People I build AI agents and workflow automation for an enterprise analytics team: multi-step manual reports turned into scripted pipelines, and a multi-agent assistant that answers questions against a governed data warehouse. Most of the job is the unglamorous part — routing, validation, access control, and checking answers against the data instead of trusting the model. Before that, at Boundary Remote Subsurface Solutions, I built ML pipelines for a geospatial AI framework fusing heterogeneous subsurface data, which taught the same lesson in a different domain: data quality and validation decide whether a model is trustworthy, not the model itself.\n\nThe projects on this site follow that same thread — a full-stack application, a production-style backend assistant, and a research pipeline built to be evaluated honestly rather than to look impressive.",
     "avatarImage": "/raj_headshot.JPG",
-    "resumeUrl": "/Raj_Shah_Resume.pdf",
     "social": {
       "github": "https://github.com/rajshah1909",
       "linkedin": "https://www.linkedin.com/in/raj-shah-ai",
@@ -27,8 +26,29 @@
       "summary": "Build AI agents and workflow automation for an enterprise analytics team — replacing manual, multi-step reporting with scripted pipelines and putting a governed natural-language interface on top of a data warehouse.",
       "metrics": [
         {
+          "value": "95%+",
+          "label": "less time per monthly report run",
+          "bar": {
+            "before": "Manual",
+            "after": "Automated",
+            "ratio": 0.04
+          }
+        },
+        {
+          "value": "5+",
+          "label": "reports automated end to end, in monthly use"
+        },
+        {
           "value": "19.7s → 10.5s",
           "label": "avg agent response time"
+        },
+        {
+          "value": "10",
+          "label": "agents coordinated in a multi-agent framework"
+        },
+        {
+          "value": "30+",
+          "label": "recorded sessions turned into knowledge-base entries"
         }
       ],
       "stack": [
@@ -48,11 +68,11 @@
       "contributions": [
         {
           "area": "Report automation",
-          "detail": "Turned a monthly manual reporting process — file unpacking, format conversion, tab-to-tab copying, pivots, calculated fields — into a scripted end-to-end pipeline that routes inputs by file name and runs each report in sequence. Next step: trigger it automatically when source files arrive."
+          "detail": "Turned a monthly manual reporting process — file unpacking, format conversion, tab-to-tab copying, pivots, calculated fields — into a scripted end-to-end pipeline that routes inputs by file name and runs each report in sequence. Five-plus reports now run this way for every monthly delivery."
         },
         {
           "area": "Agentic AI",
-          "detail": "Lead architecture and planning for a multi-agent analytics assistant: a supervisor that sequences work, an agent registry, a routing layer, and specialist agents for knowledge-base answers and SQL generation. Running a benchmark that compares routing approaches on accuracy, latency, and cost before committing to one."
+          "detail": "Lead architecture and planning for a 10-agent analytics assistant: a supervisor that sequences work, an agent registry, a routing layer, and specialist agents for knowledge-base answers and SQL generation. The rebuild replaced a single-agent version whose answers were not grounded in the data."
         },
         {
           "area": "Reliability & security",

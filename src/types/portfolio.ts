@@ -14,6 +14,8 @@ export type Social = {
 export type Metric = {
   value: string;
   label: string;
+  /** Optional before/after bar. `ratio` = after ÷ before (0–1). */
+  bar?: { before: string; after: string; ratio: number };
 };
 
 export type Profile = {
