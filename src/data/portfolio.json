@@ -29,18 +29,6 @@
         {
           "value": "19.7s → 10.5s",
           "label": "avg agent response time"
-        },
-        {
-          "value": "TODO hrs → TODO min",
-          "label": "monthly report cycle, per run"
-        },
-        {
-          "value": "TODO",
-          "label": "manual reports converted to scripted pipelines"
-        },
-        {
-          "value": "TODO",
-          "label": "meeting transcripts distilled into the team knowledge base"
         }
       ],
       "stack": [
@@ -118,7 +106,8 @@
         "Scikit-learn",
         "Parquet",
         "ETL"
-      ]
+      ],
+      "companyShort": "Boundary RSS"
     },
     {
       "company": "The Marcus Harris Foundation",
@@ -138,7 +127,8 @@
         "Python",
         "Pandas",
         "Tableau"
-      ]
+      ],
+      "companyShort": "Marcus Harris Fdn."
     }
   ],
   "projects": [

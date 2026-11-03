@@ -44,6 +44,8 @@ export type SkillGroup = {
  */
 export type Experience = {
   company: string;
+  /** Short label for tight spaces, e.g. the hero metrics strip. */
+  companyShort?: string;
   role: string;
   /** Earlier title at the same employer, if promoted internally. */
   priorRole?: string;

@@ -3,7 +3,10 @@ import { usePortfolio } from "../hooks/usePortfolio";
 export function HeroSection() {
   const { profile, experience } = usePortfolio();
   const current = experience.find((e) => e.current);
-  const metrics = current?.metrics.slice(0, 3) ?? [];
+  // Current role first, then earlier roles, so the strip is always full.
+  const metrics = [current, ...experience.filter((e) => !e.current)]
+    .flatMap((e) => (e ? e.metrics.map((m) => ({ ...m, company: e.companyShort ?? e.company })) : []))
+    .slice(0, 3);
 
   return (
     <section id="home" className="scroll-mt-20">
@@ -67,18 +70,15 @@ export function HeroSection() {
             {metrics.map((m, i) => (
               <div
                 key={m.label}
-                className={"flex flex-col-reverse px-0 py-5 sm:px-5 " + (i > 0 ? "border-t border-rule sm:border-l sm:border-t-0" : "sm:pl-0")}
+                className={"flex flex-col px-0 py-5 sm:px-5 " + (i > 0 ? "border-t border-rule sm:border-l sm:border-t-0" : "sm:pl-0")}
               >
-                <dt className="mt-1 text-xs text-inkFaint">{m.label}</dt>
-                <dd className="tabular font-mono text-2xl text-ink">{m.value}</dd>
+                <dt className="order-2 mt-1 text-xs text-inkFaint">
+                  {m.label} · <span className="font-mono">{m.company}</span>
+                </dt>
+                <dd className="order-1 tabular font-mono text-2xl text-ink">{m.value}</dd>
               </div>
             ))}
           </dl>
-        ) : null}
-        {current ? (
-          <p className="mt-3 font-mono text-xs text-inkFaint">
-            {current.role} · {current.company} · {current.period}
-          </p>
         ) : null}
       </div>
     </section>
