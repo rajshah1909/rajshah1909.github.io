@@ -1,25 +1,24 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+/** Opacity-only reveal. No translate: content should not move under the reader. */
 export function Reveal({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
+    const el = ref.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setVisible(true);
       return;
     }
-    const el = ref.current;
-    if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.unobserve(el);
+          observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" },
+      { threshold: 0.05 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -28,10 +27,7 @@ export function Reveal({ children }: { children: ReactNode }) {
   return (
     <div
       ref={ref}
-      className={
-        "transition duration-700 ease-out " +
-        (visible ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0")
-      }
+      className={"transition-opacity duration-300 ease-out " + (visible ? "opacity-100" : "opacity-0")}
     >
       {children}
     </div>

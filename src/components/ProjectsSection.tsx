@@ -13,11 +13,12 @@ export function ProjectsSection() {
 
   return (
     <SectionShell id="projects" label="Projects">
-      <div className="flex flex-col gap-6">
-        {projects.map((p) => (
+      <div className="flex flex-col">
+        {projects.map((p, i) => (
           <ProjectCard
             key={p.id}
             project={p}
+            index={i + 1}
             ref={(el) => {
               triggerRefs.current[p.id] = el;
             }}

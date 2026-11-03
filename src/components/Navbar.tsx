@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { ScrollProgress } from "./ScrollProgress";
+import { usePortfolio } from "../hooks/usePortfolio";
 
 const nav = [
-  { id: "home", label: "Home", href: "#home" },
-  { id: "about", label: "About", href: "#about" },
-  { id: "experience", label: "Experience", href: "#experience" },
+  { id: "experience", label: "Work", href: "#experience" },
   { id: "projects", label: "Projects", href: "#projects" },
   { id: "skills", label: "Skills", href: "#skills" },
-  { id: "education", label: "Education", href: "#education" },
+  { id: "about", label: "About", href: "#about" },
   { id: "contact", label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
-  const [active, setActive] = useState("home");
+  const { profile } = usePortfolio();
+  const [active, setActive] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-ground/90 backdrop-blur supports-[backdrop-filter]:bg-ground/75">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#home" className="font-mono text-xl text-ink" aria-label="Home">
+        <a href="#home" className="font-mono text-base font-medium tracking-tight text-ink" aria-label="Back to top">
           Raj Shah
         </a>
         <nav className="hidden items-center gap-5 md:flex" aria-label="Primary">
@@ -54,10 +54,20 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
+          {profile.resumeUrl ? (
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-rule px-3 py-1 font-mono text-sm text-ink transition-colors hover:border-signal hover:text-signal"
+            >
+              Resume
+            </a>
+          ) : null}
         </nav>
         <button
           type="button"
-          className="rounded-md border border-rule p-2 text-inkMuted md:hidden"
+          className="border border-rule p-2 text-inkMuted md:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
@@ -84,7 +94,7 @@ export function Navbar() {
               onClick={() => setMenuOpen(false)}
               aria-current={active === l.id ? "page" : undefined}
               className={
-                "rounded-md px-2 py-2 font-mono text-sm transition-colors " +
+                "px-2 py-2 font-mono text-sm transition-colors " +
                 (active === l.id ? "text-signal" : "text-inkMuted hover:text-ink")
               }
             >

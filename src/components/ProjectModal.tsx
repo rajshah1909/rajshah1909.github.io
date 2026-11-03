@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { Project } from "../types/portfolio";
 import { ArchitectureDiagram } from "./ArchitectureDiagram";
@@ -24,6 +24,12 @@ export function ProjectModal({
 }) {
   const closeRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setShown(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -64,7 +70,7 @@ export function ProjectModal({
   return createPortal(
     <div className="fixed inset-0 z-50">
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className={"absolute inset-0 bg-black/70 transition-opacity duration-150 ease-out " + (shown ? "opacity-100" : "opacity-0")}
         onClick={onClose}
         aria-hidden="true"
       />
@@ -73,7 +79,7 @@ export function ProjectModal({
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
-        className="absolute inset-y-0 right-0 flex w-full max-w-2xl flex-col bg-ground shadow-2xl outline-none sm:border-l sm:border-rule"
+        className={"absolute inset-y-0 right-0 flex w-full max-w-2xl flex-col bg-ground outline-none transition-[opacity,transform] duration-150 ease-out sm:border-l sm:border-rule " + (shown ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0")}
       >
         <div className="flex items-start justify-between gap-4 border-b border-rule px-6 py-5 sm:px-10">
           <div className="min-w-0">
@@ -87,7 +93,7 @@ export function ProjectModal({
             type="button"
             onClick={onClose}
             aria-label="Close case study"
-            className="shrink-0 rounded-md border border-rule px-3 py-2 font-mono text-xs text-inkMuted transition-colors hover:border-signal hover:text-ink"
+            className="shrink-0 border border-rule px-3 py-2 font-mono text-xs text-inkMuted transition-colors hover:border-signal hover:text-ink"
           >
             Close
           </button>

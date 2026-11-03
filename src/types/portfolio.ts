@@ -53,6 +53,10 @@ export type Experience = {
   /** One sentence. Not a paragraph. */
   summary: string;
   metrics: Metric[];
+  /** What the work is, by area. No client names, programs, or file names. */
+  contributions?: { area: string; detail: string }[];
+  /** Shape of a typical week. */
+  week?: { label: string; detail: string }[];
   stack: string[];
 };
 

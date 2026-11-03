@@ -2,30 +2,24 @@ import { forwardRef } from "react";
 import type { Project } from "../types/portfolio";
 import { Metric } from "./Metric";
 
-export const ProjectCard = forwardRef<HTMLButtonElement, { project: Project; onOpen: () => void }>(
-  function ProjectCard({ project, onOpen }, ref) {
+export const ProjectCard = forwardRef<HTMLButtonElement, { project: Project; index: number; onOpen: () => void }>(
+  function ProjectCard({ project, index, onOpen }, ref) {
     return (
-      <article className="group rounded-lg border border-rule bg-surface p-6 shadow-card transition-colors duration-300 ease-out hover:border-signal/40 sm:p-8">
+      <article className="group border-t border-rule py-10 first:border-t-0 first:pt-0">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <h3 className="text-xl font-semibold text-ink">{project.title}</h3>
+          <h3 className="text-xl font-semibold text-ink">
+            <span className="tabular mr-3 font-mono text-sm text-signal">{String(index).padStart(2, "0")}</span>
+            {project.title}
+          </h3>
           {project.period ? (
             <span className="tabular font-mono text-sm text-inkFaint">{project.period}</span>
           ) : null}
         </div>
         {project.subtitle ? <p className="mt-1 text-inkMuted">{project.subtitle}</p> : null}
 
-        <p className="mt-4 max-w-[62ch] text-sm text-inkMuted line-clamp-2">{project.problem}</p>
+        <p className="mt-4 max-w-[62ch] text-sm text-inkMuted line-clamp-3">{project.problem}</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.primarySkills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded border border-rule px-2 py-1 font-mono text-xs text-inkMuted"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
+        <p className="mt-4 font-mono text-xs text-inkFaint">{project.primarySkills.join(" · ")}</p>
 
         {project.metrics.length > 0 ? (
           <div className="mt-6 flex flex-wrap gap-8">
@@ -40,9 +34,9 @@ export const ProjectCard = forwardRef<HTMLButtonElement, { project: Project; onO
             ref={ref}
             type="button"
             onClick={onOpen}
-            className="rounded-md border border-signal/50 px-3 py-1.5 text-signal transition-colors hover:bg-signal/10"
+            className="border border-signal px-3 py-1.5 text-signal transition-colors hover:bg-signal hover:text-ground"
           >
-            View Case Study
+            Read case study →
           </button>
           {project.repoLink ? (
             <a

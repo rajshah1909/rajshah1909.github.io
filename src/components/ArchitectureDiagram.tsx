@@ -10,7 +10,7 @@ export function ArchitectureDiagram({ steps }: { steps: string[] }) {
           <li key={step} className="flex flex-col">
             <div
               className={
-                "rounded-md border-l-2 bg-panel px-4 py-3 text-sm " +
+                "border-l-2 bg-panel px-4 py-3 text-sm " +
                 (highlighted ? "border-l-signal text-ink" : "border-l-rule text-inkMuted")
               }
             >
