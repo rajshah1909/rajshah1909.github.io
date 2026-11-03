@@ -108,15 +108,28 @@
       "period": "Jan 2026 — Sep 2026",
       "location": "Los Angeles, CA · Remote",
       "current": false,
-      "summary": "ML pipelines for a production geospatial AI framework ingesting 13+ heterogeneous subsurface dataset types, with structured QC, schema validation, and depth-gap classification.",
+      "summary": "ML pipelines for a production geospatial AI agent framework that ingests 13+ heterogeneous subsurface dataset types — seismic, well log, gravity, magnetic, and hyperspectral.",
       "metrics": [
+        {
+          "value": "20% → <5%",
+          "label": "preprocessing error rate",
+          "bar": {
+            "before": "Before QC",
+            "after": "After QC",
+            "ratio": 0.25
+          }
+        },
         {
           "value": "0.65 → 0.78",
           "label": "model R²"
         },
         {
-          "value": "20% → <5%",
-          "label": "preprocessing error rate"
+          "value": "15–20%",
+          "label": "lower RMSE"
+        },
+        {
+          "value": "~40%",
+          "label": "fewer manual iteration cycles"
         }
       ],
       "stack": [
@@ -124,10 +137,30 @@
         "Pandas",
         "NumPy",
         "Scikit-learn",
+        "Feature Engineering",
         "Parquet",
-        "ETL"
+        "ETL",
+        "Schema Validation"
       ],
-      "companyShort": "Boundary RSS"
+      "companyShort": "Boundary RSS",
+      "contributions": [
+        {
+          "area": "Data quality",
+          "detail": "Built structured QC workflows, schema validation, and depth-gap classification for 13+ dataset types, cutting preprocessing error rates from about 20% to under 5%."
+        },
+        {
+          "area": "Model performance",
+          "detail": "Raised model R² from 0.65 to 0.78 and lowered RMSE by 15–20% through feature engineering and fixes to training-data quality."
+        },
+        {
+          "area": "Workflow automation",
+          "detail": "Automated the ML workflow end to end — preprocessing, inference, and post-processing — cutting manual iteration cycles by about 40%."
+        },
+        {
+          "area": "Validation",
+          "detail": "Validated outputs across 5 reservoir AI modules (WLFM, reservoir characterization, production, geomechanics, joined context) for cross-module consistency, and evaluated multimodal data across geological regions to improve generalization."
+        }
+      ]
     },
     {
       "company": "The Marcus Harris Foundation",
@@ -135,20 +168,53 @@
       "period": "Aug 2025 — Nov 2025",
       "location": "Remote",
       "current": false,
-      "summary": "Cleaned and validated donor records, then built the SQL and Tableau reporting layer leadership used for outreach decisions.",
+      "summary": "Cleaned and analyzed donor data, then built the SQL and Tableau reporting layer leadership used to steer outreach.",
       "metrics": [
         {
+          "value": "~30%",
+          "label": "less manual processing time",
+          "bar": {
+            "before": "Before",
+            "after": "After",
+            "ratio": 0.7
+          }
+        },
+        {
           "value": "1,500+",
-          "label": "records validated"
+          "label": "records cleaned and validated"
+        },
+        {
+          "value": "~25%",
+          "label": "improvement in data accuracy"
         }
       ],
       "stack": [
         "SQL",
         "Python",
         "Pandas",
+        "NumPy",
+        "EDA",
         "Tableau"
       ],
-      "companyShort": "Marcus Harris Fdn."
+      "companyShort": "Marcus Harris Fdn.",
+      "contributions": [
+        {
+          "area": "Data cleaning",
+          "detail": "Cleaned and validated 1,500+ records with SQL and Python (Pandas, NumPy) — normalization and deduplication — improving data accuracy by about 25%."
+        },
+        {
+          "area": "SQL",
+          "detail": "Wrote optimized queries (joins, aggregations) to extract and transform structured data, reducing manual processing time by about 30%."
+        },
+        {
+          "area": "Analysis",
+          "detail": "Ran exploratory analysis to surface trends, correlations, and donor-behavior patterns behind KPI decisions."
+        },
+        {
+          "area": "Reporting",
+          "detail": "Built Tableau dashboards for KPIs and performance trends, giving leadership clearer reporting for outreach strategy."
+        }
+      ]
     }
   ],
   "projects": [

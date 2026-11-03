@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background-color: #0e1114;
+  background-color: #1B2230;
 }
 
 p,
@@ -39,9 +39,9 @@ li {
   left: 1rem;
   top: -3rem;
   z-index: 100;
-  background: #171c21;
-  color: #e6eaed;
-  border: 1px solid #2a323a;
+  background: #232B3B;
+  color: #F1F4F8;
+  border: 1px solid #3A4659;
   padding: 0.5rem 1rem;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.875rem;

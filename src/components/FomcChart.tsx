@@ -87,7 +87,7 @@ export function FomcChart() {
   return (
     <div className="mt-8 border border-rule bg-panel p-6">
       <style>{`
-        .fomc-chart { --chart-signal: #FFB000; --chart-cool: #6E97B8; --chart-warn: #D9604A; --chart-grey: #7C868E; }
+        .fomc-chart { --chart-signal: #FFB000; --chart-cool: #7FA8CC; --chart-warn: #E2735E; --chart-grey: #8F9BAD; }
       `}</style>
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex gap-1 font-mono text-xs" role="group" aria-label="Tenor">

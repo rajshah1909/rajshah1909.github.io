@@ -4,6 +4,13 @@ import type { Metric } from "../types/portfolio";
  * Featured result with a before/after bar, then the remaining metrics as a
  * ruled readout grid. Bars are drawn to scale from `bar.ratio`.
  */
+const LG_COLS: Record<number, string> = {
+  1: "lg:grid-cols-1",
+  2: "lg:grid-cols-2",
+  3: "lg:grid-cols-3",
+  4: "lg:grid-cols-4",
+};
+
 export function ImpactPanel({ metrics }: { metrics: Metric[] }) {
   const featured = metrics.find((m) => m.bar);
   const rest = metrics.filter((m) => m !== featured);
@@ -20,19 +27,20 @@ export function ImpactPanel({ metrics }: { metrics: Metric[] }) {
             <ScaleBar label={featured.bar.before} width={1} tone="muted" />
             <ScaleBar label={featured.bar.after} width={featured.bar.ratio} tone="signal" />
             <figcaption className="mt-3 font-mono text-[11px] text-inkFaint">
-              time per run, drawn to scale
+              drawn to scale
             </figcaption>
           </figure>
         </div>
       ) : null}
 
       {rest.length > 0 ? (
-        <dl className="grid grid-cols-2 lg:grid-cols-4">
+        <dl className={"grid grid-cols-2 " + LG_COLS[Math.min(rest.length, 4)]}>
           {rest.map((m, i) => (
             <div
               key={m.label}
               className={
                 "flex flex-col p-5 " +
+                (rest.length % 2 === 1 && i === rest.length - 1 ? "col-span-2 lg:col-span-1 " : "") +
                 (i % 2 === 1 ? "border-l border-rule " : "") +
                 (i >= 2 ? "border-t border-rule lg:border-t-0 " : "") +
                 (i > 0 ? "lg:border-l lg:border-rule" : "")
